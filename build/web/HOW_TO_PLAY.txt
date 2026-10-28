@@ -1,0 +1,14 @@
+ACE NEGOTIATOR - browser version
+
+Browsers block games opened straight from a folder (double-clicking index.html will NOT work).
+
+EASIEST: upload to itch.io (free)
+ 1. Make a free account at itch.io, then "Upload new project".
+ 2. Kind of project: HTML.
+ 3. Upload ace_negotiator_web.zip (this whole zip).
+ 4. Tick "This file will be played in the browser". Set size 1280 x 720.
+ 5. Save. You can keep the page private/draft and share a secret link.
+
+ON YOUR OWN COMPUTER (needs Python installed):
+ Open a terminal in this folder and run:   python -m http.server 8000
+ Then open http://localhost:8000 in Chrome, Edge or Firefox.

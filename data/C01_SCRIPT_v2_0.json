@@ -1,0 +1,5205 @@
+{
+  "case": {
+    "title": "The Restructuring",
+    "employer": "Northbridge",
+    "worker": "Daniel",
+    "window": "2026-06-08 to 2026-06-26",
+    "scene_ids": [
+      "C01_S01",
+      "C01_S02",
+      "C01_S03",
+      "C01_S04",
+      "C01_S05",
+      "C01_S06",
+      "C01_S07",
+      "C01_S08",
+      "C01_S09",
+      "C01_S10",
+      "C01_S11",
+      "C01_S12"
+    ],
+    "puzzle_ids": [
+      "C01_P01",
+      "C01_P02",
+      "C01_P03",
+      "C01_P04"
+    ],
+    "negotiation_ids": [
+      "C01_N01",
+      "C01_N02"
+    ],
+    "evidence_ids": [
+      "C01_E01",
+      "C01_E02",
+      "C01_E03",
+      "C01_E04",
+      "C01_E05",
+      "C01_E06",
+      "C01_E07",
+      "C01_E08",
+      "C01_E09",
+      "C01_E10"
+    ],
+    "outcomes": [
+      "Daniel-specific authorised settlement",
+      "Northbridge negotiations continue",
+      "Dispute recorded without an agreement"
+    ]
+  },
+  "scenes": {
+    "C01_S01": {
+      "id": "C01_S01",
+      "background": "BG01",
+      "summary": "Daniel consults UWF; Vera learns to define facts rather than allege guilt.",
+      "entry": "C01_S01_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S01_R_D0001",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "Northbridge gave me a dismissal notice. It says my position is being removed. Yesterday they advertised a job that sounds like mine.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S01_R_D0002"
+        },
+        {
+          "id": "C01_S01_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "What does the notice say about the reason? Not what you think they meant—what they actually wrote.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S01_R_D0003"
+        },
+        {
+          "id": "C01_S01_R_D0003",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "“Work shortage following reorganisation.” Apparently the shortages do not extend to people who can do my work.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S01_R_D0004"
+        },
+        {
+          "id": "C01_S01_R_D0004",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "That may be important. We need to separate the notice, the advertised vacancy, and Daniel’s account of what he does.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S01_R_D0005"
+        },
+        {
+          "id": "C01_S01_R_D0005",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Then I want the documents. And Daniel, you decide how your personal claim is handled—not the loudest person in this office.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S01_R_X0001"
+        },
+        {
+          "id": "C01_S01_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "What should Vera record as the opening issue?",
+          "options": [
+            {
+              "label": "The stated work-shortage reason and Daniel’s reported vacancy",
+              "next": "C01_S01_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "The vacancy proves the dismissal was unlawful",
+              "next": "C01_S01_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Other Northbridge employees must agree with Daniel",
+              "next": "C01_S01_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S01_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Two separate claims to investigate: an issued notice and a vacancy Daniel believes overlaps with his job.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S01_R_X0002"
+        },
+        {
+          "id": "C01_S01_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The vacancy is a lead, not yet a legal finding. We need the actual duties and other relevant circumstances.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S01_R_X0002"
+        },
+        {
+          "id": "C01_S01_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "We have heard Daniel’s account. Do not put words into his colleagues’ mouths.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S01_R_X0002"
+        },
+        {
+          "id": "C01_S01_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S01_R_D0009"
+        },
+        {
+          "id": "C01_S01_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S01_R_X0003"
+        },
+        {
+          "id": "C01_S01_R_X0003",
+          "type": "scene_exit",
+          "scene_complete": "C01_S01_COMPLETE",
+          "next_scene": "C01_S02"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S01_I01"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S02": {
+      "id": "C01_S02",
+      "background": "BG02",
+      "summary": "Daniel supplies dismissal notice and contract independently; individual-use permissions.",
+      "entry": "C01_S02_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S02_R_D0001",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "This is the notice they gave me. The contract is here too. I kept both, even after they told me the decision was settled.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S02_R_D0002"
+        },
+        {
+          "id": "C01_S02_R_D0002",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Good. Two documents, two sources. We record who supplied each and exactly what we can disclose.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_D0003"
+        },
+        {
+          "id": "C01_S02_R_D0003",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The notice gives Northbridge’s stated reason. The contract shows your agreed employment terms; neither answers the vacancy question alone.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_D0004"
+        },
+        {
+          "id": "C01_S02_R_D0004",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "The contract has my address and salary. Do we need to show all of that to their lawyer?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S02_R_D0005"
+        },
+        {
+          "id": "C01_S02_R_D0005",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "No. We will minimise what we present and record the permitted purpose. A case file is not public property.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0001"
+        },
+        {
+          "id": "C01_S02_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which part of the employment papers belongs in the negotiation file?",
+          "options": [
+            {
+              "label": "The authenticated passages relevant to Daniel’s employment",
+              "next": "C01_S02_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Every private detail, because it is in the contract",
+              "next": "C01_S02_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "A general release of Daniel’s claims",
+              "next": "C01_S02_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S02_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Use the relevant clauses and record the source. Keep unrelated personal data out of the presentation.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0002"
+        },
+        {
+          "id": "C01_S02_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "More paper is not better evidence. We do not need to circulate Daniel’s address to explain his role.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0002"
+        },
+        {
+          "id": "C01_S02_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "Nobody has proposed an authorised settlement, and Daniel has not instructed us to release claims.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0002"
+        },
+        {
+          "id": "C01_S02_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S02_R_D0009"
+        },
+        {
+          "id": "C01_S02_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Before we quote the notice, check whether Daniel supplied the complete signed version.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0003"
+        },
+        {
+          "id": "C01_S02_R_X0003",
+          "type": "gate",
+          "test": "evidence_auth:C01_E01",
+          "tag": "EVIDENCE:C01_E01",
+          "yes": "C01_S02_R_D0010",
+          "no": "C01_S02_R_D0012"
+        },
+        {
+          "id": "C01_S02_R_D0010",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The notice is verified for use. Quote the employer’s stated reason and operative wording only.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_D0011"
+        },
+        {
+          "id": "C01_S02_R_D0011",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0004"
+        },
+        {
+          "id": "C01_S02_R_D0012",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We cannot establish the notice’s exact contents from an unverified copy.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_D0013"
+        },
+        {
+          "id": "C01_S02_R_D0013",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0004"
+        },
+        {
+          "id": "C01_S02_R_X0004",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E01",
+          "next": "C01_S02_R_X0005"
+        },
+        {
+          "id": "C01_S02_R_X0005",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E01",
+          "next": "C01_S02_R_D0014"
+        },
+        {
+          "id": "C01_S02_R_D0014",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Daniel’s contract matters for his employment terms; we do not need to parade his private details.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0006"
+        },
+        {
+          "id": "C01_S02_R_X0006",
+          "type": "gate",
+          "test": "evidence_auth:C01_E02",
+          "tag": "EVIDENCE:C01_E02",
+          "yes": "C01_S02_R_D0015",
+          "no": "C01_S02_R_D0017"
+        },
+        {
+          "id": "C01_S02_R_D0015",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The authenticated contract supports the relevant employment terms—not what vacancies Northbridge had.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_D0016"
+        },
+        {
+          "id": "C01_S02_R_D0016",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0007"
+        },
+        {
+          "id": "C01_S02_R_D0017",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Without an authenticated relevant copy we should not state the contractual terms as proven.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_D0018"
+        },
+        {
+          "id": "C01_S02_R_D0018",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S02_R_X0007"
+        },
+        {
+          "id": "C01_S02_R_X0007",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E02",
+          "next": "C01_S02_R_X0008"
+        },
+        {
+          "id": "C01_S02_R_X0008",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E02",
+          "next": "C01_S02_R_D0019"
+        },
+        {
+          "id": "C01_S02_R_D0019",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S02_R_X0009"
+        },
+        {
+          "id": "C01_S02_R_X0009",
+          "type": "scene_exit",
+          "scene_complete": "C01_S02_COMPLETE",
+          "next_scene": "C01_S03"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S02_I01",
+        "C01_S02_I02"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S03": {
+      "id": "C01_S03",
+      "background": "BG05",
+      "summary": "Request and authenticate organisation chart; information-gap fallback.",
+      "entry": "C01_S03_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S03_R_D0001",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "This is the proposed chart Northbridge circulated. I cannot find Daniel’s box on it.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_D0002"
+        },
+        {
+          "id": "C01_S03_R_D0002",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "A box disappearing is not the same thing as work disappearing, Ms Justice.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_D0003"
+        },
+        {
+          "id": "C01_S03_R_D0003",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Then let us have the version date, the approval status, and a record of what work moved to the new team.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_D0004"
+        },
+        {
+          "id": "C01_S03_R_D0004",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "You want the decorative arrows explained?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_D0005"
+        },
+        {
+          "id": "C01_S03_R_D0005",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Precisely. Once we know what the arrows actually represent, we can make a claim that survives scrutiny.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_X0001"
+        },
+        {
+          "id": "C01_S03_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "What is the safest reading of the proposed chart?",
+          "options": [
+            {
+              "label": "Identify which structure and version it actually shows",
+              "next": "C01_S03_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Declare that every change has already been implemented",
+              "next": "C01_S03_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Treat all employees as approving the reorganisation",
+              "next": "C01_S03_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S03_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "This shows a proposed structure. We still need the approval status and the movement of actual duties.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_X0002"
+        },
+        {
+          "id": "C01_S03_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "A draft may be significant evidence, but a draft is not automatically an implemented decision.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_X0002"
+        },
+        {
+          "id": "C01_S03_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "A management chart records no employee vote or individual consent.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_X0002"
+        },
+        {
+          "id": "C01_S03_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S03_R_D0009"
+        },
+        {
+          "id": "C01_S03_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Ask which chart was circulated, when, and whether it was only a proposal.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_X0003"
+        },
+        {
+          "id": "C01_S03_R_X0003",
+          "type": "gate",
+          "test": "evidence_auth:C01_E03",
+          "tag": "EVIDENCE:C01_E03",
+          "yes": "C01_S03_R_D0010",
+          "no": "C01_S03_R_D0012"
+        },
+        {
+          "id": "C01_S03_R_D0010",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We can rely on this dated chart for the structure it actually shows.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_D0011"
+        },
+        {
+          "id": "C01_S03_R_D0011",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_X0004"
+        },
+        {
+          "id": "C01_S03_R_D0012",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "An unsigned, undated chart cannot establish the proposed structure for negotiation.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_D0013"
+        },
+        {
+          "id": "C01_S03_R_D0013",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S03_R_X0004"
+        },
+        {
+          "id": "C01_S03_R_X0004",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E03",
+          "next": "C01_S03_R_X0005"
+        },
+        {
+          "id": "C01_S03_R_X0005",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E03",
+          "next": "C01_S03_R_D0014"
+        },
+        {
+          "id": "C01_S03_R_D0014",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S03_R_X0006"
+        },
+        {
+          "id": "C01_S03_R_X0006",
+          "type": "scene_exit",
+          "scene_complete": "C01_S03_COMPLETE",
+          "next_scene": "C01_S04"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S03_I01",
+        "C01_S03_I02"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S04": {
+      "id": "C01_S04",
+      "background": "BG02",
+      "summary": "Record Daniel’s goals and specific individual instructions; no blank cheque to settle.",
+      "entry": "C01_S04_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S04_R_D0001",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "I do not want to win an argument and lose my job in the process.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S04_R_D0002"
+        },
+        {
+          "id": "C01_S04_R_D0002",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "If Northbridge offers you a different role, what would you need to know before you considered it?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S04_R_D0003"
+        },
+        {
+          "id": "C01_S04_R_D0003",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "The actual duties, pay, where I would work—and whether they expect me to sign something that gives up every claim I have.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S04_R_D0004"
+        },
+        {
+          "id": "C01_S04_R_D0004",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We will ask, and we will not accept individual terms on your behalf without your informed instructions for those terms.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S04_R_D0005"
+        },
+        {
+          "id": "C01_S04_R_D0005",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Our authority to negotiate for UWF is a separate question. Neither authority can be borrowed from the other.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S04_R_X0001"
+        },
+        {
+          "id": "C01_S04_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which instruction should Vera write into Daniel’s file?",
+          "options": [
+            {
+              "label": "Discuss proposals; ask Daniel before accepting individual terms",
+              "next": "C01_S04_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Promise to accept the next role offered",
+              "next": "C01_S04_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Authorise a union-wide agreement in Daniel’s name",
+              "next": "C01_S04_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S04_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Daniel asks to review actual duties and terms before any individual agreement. We will record that limit.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S04_R_X0002"
+        },
+        {
+          "id": "C01_S04_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Daniel has not approved an unspecified vacancy or its conditions.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S04_R_X0002"
+        },
+        {
+          "id": "C01_S04_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "One worker’s instructions cannot confer collective acceptance authority on UWF.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S04_R_X0002"
+        },
+        {
+          "id": "C01_S04_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S04_R_D0009"
+        },
+        {
+          "id": "C01_S04_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S04_R_X0003"
+        },
+        {
+          "id": "C01_S04_R_X0003",
+          "type": "scene_exit",
+          "scene_complete": "C01_S04_COMPLETE",
+          "next_scene": "C01_S05"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S04_I01",
+        "C01_S04_I02",
+        "C01_S04_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S05": {
+      "id": "C01_S05",
+      "background": "BG05",
+      "summary": "P01 position overlap: compare actual duties, not merely job titles.",
+      "entry": "C01_S05_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S05_R_D0001",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The advertised role lists most of Daniel’s duties, but gives them a new title. That seems remarkably convenient.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0002"
+        },
+        {
+          "id": "C01_S05_R_D0002",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "A convenient coincidence is not a legal finding. What tasks and qualifications can we compare?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S05_R_D0003"
+        },
+        {
+          "id": "C01_S05_R_D0003",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "The advertisement mentions the same customer systems I maintain. It also asks for experience with a tool I have never used.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0004"
+        },
+        {
+          "id": "C01_S05_R_D0004",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Then our question is concrete: which duties continue, what qualifications are genuinely needed, and what alternatives were considered?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0005"
+        },
+        {
+          "id": "C01_S05_R_D0005",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "A new name on a door will not tell us whether Daniel should have been considered for the vacancy.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0001"
+        },
+        {
+          "id": "C01_S05_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "What is the legally useful comparison?",
+          "options": [
+            {
+              "label": "Match real duties and qualifications against the vacancy",
+              "next": "C01_S05_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Assume identical job titles mean identical work",
+              "next": "C01_S05_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Assume a new title makes all reassignment questions disappear",
+              "next": "C01_S05_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S05_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Check systems supported, core duties, skills required, and whether Daniel could reasonably do the work.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0002"
+        },
+        {
+          "id": "C01_S05_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "A label alone can neither prove nor defeat the point.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0002"
+        },
+        {
+          "id": "C01_S05_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "Changing a heading is not a substitute for examining what employees actually do.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0002"
+        },
+        {
+          "id": "C01_S05_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S05_R_D0009"
+        },
+        {
+          "id": "C01_S05_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The vacancy advertisement may show what Northbridge was recruiting for; save the full dated posting.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0003"
+        },
+        {
+          "id": "C01_S05_R_X0003",
+          "type": "gate",
+          "test": "evidence_auth:C01_E04",
+          "tag": "EVIDENCE:C01_E04",
+          "yes": "C01_S05_R_D0010",
+          "no": "C01_S05_R_D0012"
+        },
+        {
+          "id": "C01_S05_R_D0010",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The dated advertisement documents a vacancy as described, not Daniel’s entitlement to it.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0011"
+        },
+        {
+          "id": "C01_S05_R_D0011",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0004"
+        },
+        {
+          "id": "C01_S05_R_D0012",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "An unverified screenshot cannot establish when or whether this job was open.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0013"
+        },
+        {
+          "id": "C01_S05_R_D0013",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0004"
+        },
+        {
+          "id": "C01_S05_R_X0004",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E04",
+          "next": "C01_S05_R_X0005"
+        },
+        {
+          "id": "C01_S05_R_X0005",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E04",
+          "next": "C01_S05_R_D0014"
+        },
+        {
+          "id": "C01_S05_R_D0014",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The job description will tell us what the new role actually requires.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0006"
+        },
+        {
+          "id": "C01_S05_R_X0006",
+          "type": "gate",
+          "test": "evidence_auth:C01_E05",
+          "tag": "EVIDENCE:C01_E05",
+          "yes": "C01_S05_R_D0015",
+          "no": "C01_S05_R_D0017"
+        },
+        {
+          "id": "C01_S05_R_D0015",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "This verified description identifies duties and qualifications, not whether Daniel meets them.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0016"
+        },
+        {
+          "id": "C01_S05_R_D0016",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0007"
+        },
+        {
+          "id": "C01_S05_R_D0017",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Without the authenticated description we cannot safely compare the complete new role.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0018"
+        },
+        {
+          "id": "C01_S05_R_D0018",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0007"
+        },
+        {
+          "id": "C01_S05_R_X0007",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E05",
+          "next": "C01_S05_R_X0008"
+        },
+        {
+          "id": "C01_S05_R_X0008",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E05",
+          "next": "C01_S05_R_D0019"
+        },
+        {
+          "id": "C01_S05_R_D0019",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Compare the advertised role against Daniel’s duties line by line.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_D0020"
+        },
+        {
+          "id": "C01_S05_R_D0020",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Compare duties, skills and vacancy requirements—not job labels alone.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S05_R_X0009"
+        },
+        {
+          "id": "C01_S05_R_X0009",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which conclusion does the case record justify?",
+          "options": [
+            {
+              "label": "Documented specific finding",
+              "next": "C01_S05_R_X0011",
+              "effects": []
+            },
+            {
+              "label": "Limited finding (named uncertainty)",
+              "next": "C01_S05_R_X0012",
+              "effects": []
+            },
+            {
+              "label": "Not enough verified information",
+              "next": "C01_S05_V11_INSUFFICIENT_GATE",
+              "effects": []
+            },
+            {
+              "label": "HINT 1 (free)",
+              "next": "C01_S05_R_D0026",
+              "effects": []
+            },
+            {
+              "label": "HINT 2 (free)",
+              "next": "C01_S05_R_D0027",
+              "effects": []
+            },
+            {
+              "label": "HINT 3 (free)",
+              "next": "C01_S05_R_D0028",
+              "effects": []
+            }
+          ],
+          "tag": "PUZZLE:C01_P01"
+        },
+        {
+          "id": "C01_S05_V11_INSUFFICIENT_GATE",
+          "type": "gate",
+          "test": "puzzle_insufficient:C01_P01",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P01:INSUFFICIENT",
+          "yes": "C01_S05_R_D0025",
+          "no": "C01_S05_V11_INSUFFICIENT_CORRECTION"
+        },
+        {
+          "id": "C01_S05_V11_INSUFFICIENT_CORRECTION",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The authenticated records establish a material duty overlap, which warrants a documented reassignment assessment.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0009"
+        },
+        {
+          "id": "C01_S05_R_X0010",
+          "type": "join",
+          "tag": "PUZZLE_RESOLVED:C01_P01",
+          "next": "C01_S05_R_D0029"
+        },
+        {
+          "id": "C01_S05_R_X0011",
+          "type": "gate",
+          "test": "puzzle_full:C01_P01",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P01",
+          "yes": "C01_S05_R_D0021",
+          "no": "C01_S05_R_D0022"
+        },
+        {
+          "id": "C01_S05_R_D0021",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The authenticated records establish a material duty overlap, which warrants a documented reassignment assessment.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0010",
+          "effects": [
+            "C01_P01:SOLVED_FULL"
+          ]
+        },
+        {
+          "id": "C01_S05_R_D0022",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S05_R_X0009"
+        },
+        {
+          "id": "C01_S05_R_X0012",
+          "type": "gate",
+          "test": "puzzle_limited:C01_P01",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P01",
+          "yes": "C01_S05_R_D0023",
+          "no": "C01_S05_R_D0024"
+        },
+        {
+          "id": "C01_S05_R_D0023",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Some duties overlap, but a decisive qualification or vacancy fact remains unverified.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0010",
+          "effects": [
+            "C01_P01:SOLVED_LIMITED"
+          ]
+        },
+        {
+          "id": "C01_S05_R_D0024",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S05_R_X0009"
+        },
+        {
+          "id": "C01_S05_R_D0025",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The gap is an unanswered requirement, not a score against either side.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0010",
+          "effects": [
+            "C01_P01:SOLVED_INSUFFICIENT_EVIDENCE"
+          ]
+        },
+        {
+          "id": "C01_S05_R_D0026",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Start with the systems Daniel actually maintains, not the job titles.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0009"
+        },
+        {
+          "id": "C01_S05_R_D0027",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Look for the advertised requirements and which ones the verified records address.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0009"
+        },
+        {
+          "id": "C01_S05_R_D0028",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "If duties match but key qualifications are unknown, report limited overlap; if the record is too thin, report the evidence gap.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S05_R_X0009"
+        },
+        {
+          "id": "C01_S05_R_D0029",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The conclusion and any remaining uncertainty are now recorded for the next stage.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S05_R_X0013"
+        },
+        {
+          "id": "C01_S05_R_X0013",
+          "type": "event",
+          "effect": "PUZZLE_COMPLETE:C01_P01",
+          "next": "C01_S05_R_D0030"
+        },
+        {
+          "id": "C01_S05_R_D0030",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S05_R_X0014"
+        },
+        {
+          "id": "C01_S05_R_X0014",
+          "type": "scene_exit",
+          "scene_complete": "C01_S05_COMPLETE",
+          "next_scene": "C01_S06"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S05_I01",
+        "C01_S05_I02",
+        "C01_S05_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S06": {
+      "id": "C01_S06",
+      "background": "BG01",
+      "summary": "Frame negotiating questions and verify initial local authority.",
+      "entry": "C01_S06_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S06_R_D0001",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Before we sit across from Northbridge, I want three questions answered: what changed, what vacancies exist, and who decided Daniel was unsuitable.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S06_R_D0002"
+        },
+        {
+          "id": "C01_S06_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "I can question their documents, but I cannot promise Daniel a deal.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S06_R_D0003"
+        },
+        {
+          "id": "C01_S06_R_D0003",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Correct. Verify the authorised UWF appointment and keep Daniel’s individual instructions in a separate record.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S06_R_D0004"
+        },
+        {
+          "id": "C01_S06_R_D0004",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "If they offer me something, bring it back to me first. I do not want to discover my consent in the minutes.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S06_R_D0005"
+        },
+        {
+          "id": "C01_S06_R_D0005",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Agreed. Today is about authorised questions, not a signature made out of impatience.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S06_R_X0001"
+        },
+        {
+          "id": "C01_S06_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "What authorisation must be verified before the first negotiation?",
+          "options": [
+            {
+              "label": "UWF’s appointment for these defined negotiating questions",
+              "next": "C01_S06_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Vera’s enthusiasm",
+              "next": "C01_S06_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Daniel’s permission to decide all collective matters",
+              "next": "C01_S06_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S06_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We need a real UWF delegation for the negotiation, and separate instructions for Daniel’s personal claim.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S06_R_X0002"
+        },
+        {
+          "id": "C01_S06_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Commitment is welcome. Authority must still be granted and recorded.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S06_R_X0002"
+        },
+        {
+          "id": "C01_S06_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "Daniel may instruct us about his own case; that does not appoint the union’s collective decision-making body.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S06_R_X0002"
+        },
+        {
+          "id": "C01_S06_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S06_R_D0009"
+        },
+        {
+          "id": "C01_S06_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S06_V11_AUTH_GATE"
+        },
+        {
+          "id": "C01_S06_V11_AUTH_GATE",
+          "type": "gate",
+          "test": "initial_authority_verified:C01",
+          "tag": "MANDATE_GATE",
+          "yes": "C01_S06_R_X0003",
+          "no": "C01_S06_V11_AUTH_PENDING"
+        },
+        {
+          "id": "C01_S06_V11_AUTH_PENDING",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We have not verified UWF’s authority for this negotiation. We must examine an actual appointment or obtain an authorised decision before we meet the employer.",
+          "animation": "A02",
+          "source": "RECONSTRUCTED_V1_1_PROPOSAL",
+          "next": "C01_S06_V11_AUTH_RECOVERY_CHOICE"
+        },
+        {
+          "id": "C01_S06_V11_AUTH_RECOVERY_CHOICE",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "How should UWF establish the initial negotiating mandate?",
+          "tag": "MANDATE_RECOVERY",
+          "options": [
+            {
+              "label": "Recheck existing appointment record",
+              "next": "C01_S06_V11_AUTH_GATE",
+              "effects": []
+            },
+            {
+              "label": "Request a decision from the authorised UWF body",
+              "next": "C01_S06_V11_AUTH_REQUEST_EVENT",
+              "effects": []
+            }
+          ]
+        },
+        {
+          "id": "C01_S06_V11_AUTH_REQUEST_EVENT",
+          "type": "event",
+          "effect": "UWF_DELEGATION_VERIFICATION_REQUESTED:C01",
+          "next": "C01_S06_V11_AUTH_GATE",
+          "note": "This action requests verification and does NOT automatically grant authority."
+        },
+        {
+          "id": "C01_S06_R_X0003",
+          "type": "scene_exit",
+          "scene_complete": "C01_S06_COMPLETE",
+          "next_scene": "C01_S07"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S06_I01",
+        "C01_S06_I02",
+        "C01_S06_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S07": {
+      "id": "C01_S07",
+      "background": "BG03",
+      "summary": "N01 restructuring and proposed-position first negotiation.",
+      "entry": "C01_S07_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S07_R_D0001",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "Northbridge has reorganised. We are not putting the old chart back merely because somebody prefers the old boxes.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0002"
+        },
+        {
+          "id": "C01_S07_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Nobody asked you to restore a chart, Mr Vane. We asked what happened to the work inside those boxes.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0003"
+        },
+        {
+          "id": "C01_S07_R_D0003",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "And what vacancies were considered before a notice was issued to Daniel.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0004"
+        },
+        {
+          "id": "C01_S07_R_D0004",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "The business needs flexibility. You are welcome to ask for the underlying material.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0005"
+        },
+        {
+          "id": "C01_S07_R_D0005",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We will. And we will distinguish a reasonable information request from a finding the evidence cannot yet support.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0001"
+        },
+        {
+          "id": "C01_S07_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "What is the proper first negotiating position?",
+          "options": [
+            {
+              "label": "Ask for the decision, vacancy and procedure records",
+              "next": "C01_S07_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Declare Northbridge guilty on opening remarks",
+              "next": "C01_S07_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Accept an unspecified employer promise",
+              "next": "C01_S07_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S07_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The dispute is about identifiable decisions and available work. Ask questions the employer can answer with sources.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0002"
+        },
+        {
+          "id": "C01_S07_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Opening rhetoric is not proof. We need to assess the applicable obligations and documents.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0002"
+        },
+        {
+          "id": "C01_S07_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "A general promise neither answers the request nor protects Daniel’s individual instructions.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0002"
+        },
+        {
+          "id": "C01_S07_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S07_R_D0009"
+        },
+        {
+          "id": "C01_S07_R_D0009",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Negotiation C01_N01 begins at Momentum five. We will use evidence only within its verified scope.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S07_R_D0010"
+        },
+        {
+          "id": "C01_S07_R_D0010",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "The company has changed teams. That is the business decision we made.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S07_R_X0003"
+        },
+        {
+          "id": "C01_S07_R_X0003",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "1. Restructuring — find the weakest unsupported claim in Northbridge’s position.",
+          "options": [
+            {
+              "label": "QUESTION! Ask for the missing distinction",
+              "next": "C01_S07_R_D0011",
+              "effects": [
+                "C01_N01:PHASE_1:QUESTION"
+              ]
+            },
+            {
+              "label": "CHALLENGE! State the supported objection",
+              "next": "C01_S07_R_D0012",
+              "effects": [
+                "C01_N01:PHASE_1:CHALLENGE"
+              ]
+            },
+            {
+              "label": "CONSULT — examine legal limits",
+              "next": "C01_S07_R_D0013",
+              "effects": [
+                "C01_N01:PHASE_1:CONSULT"
+              ]
+            },
+            {
+              "label": "EVIDENCE! Select a permitted record",
+              "next": "C01_S07_V11_EVIDENCE_MENU_C01_N01_1",
+              "effects": [],
+              "evidence_menu": [
+                "C01_E03",
+                "C01_E01"
+              ]
+            }
+          ],
+          "tag": "NEGOTIATION_PHASE:C01_N01:1"
+        },
+        {
+          "id": "C01_S07_V11_EVIDENCE_MENU_C01_N01_1",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Choose a specific authenticated, relevant record. Unavailable records cannot be presented.",
+          "tag": "PRESENTATION_SELECT:C01_N01:1",
+          "options": [
+            {
+              "label": "Present Organisation Chart (C01_E03)",
+              "evidence_id": "C01_E03",
+              "next": "C01_S07_R_X0005",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E03"
+              ]
+            },
+            {
+              "label": "Present Dismissal Notice (C01_E01)",
+              "evidence_id": "C01_E01",
+              "next": "C01_S07_R_X0005",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E01"
+              ]
+            },
+            {
+              "label": "Cancel; return to argument",
+              "next": "C01_S07_R_X0003",
+              "effects": []
+            }
+          ],
+          "candidate_status": "RECONSTRUCTED_V1_1_PROPOSAL"
+        },
+        {
+          "id": "C01_S07_R_D0011",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Please identify the approved decision and the source showing which work moved.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0003"
+        },
+        {
+          "id": "C01_S07_R_D0012",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "A chart without its decision status does not answer whether the work or only the title disappeared.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0004"
+        },
+        {
+          "id": "C01_S07_R_D0013",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Ask for the underlying decision and role map, not a confession.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0003"
+        },
+        {
+          "id": "C01_S07_R_X0004",
+          "type": "join",
+          "tag": "NEGOTIATION_PHASE:C01_N01:1",
+          "next": "C01_S07_R_X0006"
+        },
+        {
+          "id": "C01_S07_R_X0005",
+          "type": "gate",
+          "test": "phase_evidence:C01_N01:1",
+          "tag": "PRESENTATION_PERMISSION:C01_N01:1",
+          "yes": "C01_S07_R_D0014",
+          "no": "C01_S07_R_D0015"
+        },
+        {
+          "id": "C01_S07_R_D0014",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The verified chart establishes what this version depicts. It does not settle the chronology.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A06",
+          "effects": [
+            "EVIDENCE_PRESENTED:C01_N01:1"
+          ],
+          "next": "C01_S07_R_X0004"
+        },
+        {
+          "id": "C01_S07_R_D0015",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That item does not establish the proposition or is not permitted here. Select another record or use a supported non-documentary challenge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "effects": [
+            "MOMENTUM:-1"
+          ],
+          "next": "C01_S07_R_X0003"
+        },
+        {
+          "id": "C01_S07_R_X0006",
+          "type": "gate",
+          "test": "phase_evidence:C01_N01:1",
+          "tag": "EVIDENCE_GUARD:C01_N01:1",
+          "yes": "C01_S07_R_D0016",
+          "no": "C01_S07_R_D0018"
+        },
+        {
+          "id": "C01_S07_R_D0016",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The verified chart establishes what this version depicts. It does not settle the chronology.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0017"
+        },
+        {
+          "id": "C01_S07_R_D0017",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We can challenge its scope while preserving any outstanding decision record request.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0007"
+        },
+        {
+          "id": "C01_S07_R_D0018",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The approval status remains unverified. Please identify the management decision and provide the dated record.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0019"
+        },
+        {
+          "id": "C01_S07_R_D0019",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "That request is properly noted; no unsupported chronology finding is made.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0007"
+        },
+        {
+          "id": "C01_S07_R_X0007",
+          "type": "join",
+          "tag": "EVIDENCE_GUARD:C01_N01:1",
+          "next": "C01_S07_R_X0008"
+        },
+        {
+          "id": "C01_S07_R_X0008",
+          "type": "event",
+          "effect": "NEGOTIATION_PHASE_COMPLETE:C01_N01:1",
+          "next": "C01_S07_R_D0020"
+        },
+        {
+          "id": "C01_S07_R_D0020",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The restructuring questions are recorded. We can move to the vacancy without treating them as settled.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0021"
+        },
+        {
+          "id": "C01_S07_R_D0021",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "We advertised a new role. New title, new requirements. That does not mean it belongs to Daniel.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S07_R_X0009"
+        },
+        {
+          "id": "C01_S07_R_X0009",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "2. Proposed position — find the weakest unsupported claim in Northbridge’s position.",
+          "options": [
+            {
+              "label": "QUESTION! Ask for the missing distinction",
+              "next": "C01_S07_R_D0022",
+              "effects": [
+                "C01_N01:PHASE_2:QUESTION"
+              ]
+            },
+            {
+              "label": "CHALLENGE! State the supported objection",
+              "next": "C01_S07_R_D0023",
+              "effects": [
+                "C01_N01:PHASE_2:CHALLENGE"
+              ]
+            },
+            {
+              "label": "CONSULT — examine legal limits",
+              "next": "C01_S07_R_D0024",
+              "effects": [
+                "C01_N01:PHASE_2:CONSULT"
+              ]
+            },
+            {
+              "label": "EVIDENCE! Select a permitted record",
+              "next": "C01_S07_V11_EVIDENCE_MENU_C01_N01_2",
+              "effects": [],
+              "evidence_menu": [
+                "C01_E04",
+                "C01_E05"
+              ]
+            }
+          ],
+          "tag": "NEGOTIATION_PHASE:C01_N01:2"
+        },
+        {
+          "id": "C01_S07_V11_EVIDENCE_MENU_C01_N01_2",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Choose a specific authenticated, relevant record. Unavailable records cannot be presented.",
+          "tag": "PRESENTATION_SELECT:C01_N01:2",
+          "options": [
+            {
+              "label": "Present Recruitment Advertisement (C01_E04)",
+              "evidence_id": "C01_E04",
+              "next": "C01_S07_R_X0011",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E04"
+              ]
+            },
+            {
+              "label": "Present New Position Description (C01_E05)",
+              "evidence_id": "C01_E05",
+              "next": "C01_S07_R_X0011",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E05"
+              ]
+            },
+            {
+              "label": "Cancel; return to argument",
+              "next": "C01_S07_R_X0009",
+              "effects": []
+            }
+          ],
+          "candidate_status": "RECONSTRUCTED_V1_1_PROPOSAL"
+        },
+        {
+          "id": "C01_S07_R_D0022",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Which requirements are different from the work Daniel already performs?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0009"
+        },
+        {
+          "id": "C01_S07_R_D0023",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Calling a role “new” does not answer how its functions compare with Daniel’s current job.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0010"
+        },
+        {
+          "id": "C01_S07_R_D0024",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Focus the challenge on specific duties and requirements; do not demand the vacancy as a prize.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0009"
+        },
+        {
+          "id": "C01_S07_R_X0010",
+          "type": "join",
+          "tag": "NEGOTIATION_PHASE:C01_N01:2",
+          "next": "C01_S07_R_X0012"
+        },
+        {
+          "id": "C01_S07_R_X0011",
+          "type": "gate",
+          "test": "phase_evidence:C01_N01:2",
+          "tag": "PRESENTATION_PERMISSION:C01_N01:2",
+          "yes": "C01_S07_R_D0025",
+          "no": "C01_S07_R_D0026"
+        },
+        {
+          "id": "C01_S07_R_D0025",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The authenticated job material supports the particular comparison we have described.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A06",
+          "effects": [
+            "EVIDENCE_PRESENTED:C01_N01:2"
+          ],
+          "next": "C01_S07_R_X0010"
+        },
+        {
+          "id": "C01_S07_R_D0026",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That item does not establish the proposition or is not permitted here. Select another record or use a supported non-documentary challenge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "effects": [
+            "MOMENTUM:-1"
+          ],
+          "next": "C01_S07_R_X0009"
+        },
+        {
+          "id": "C01_S07_R_X0012",
+          "type": "gate",
+          "test": "phase_evidence:C01_N01:2",
+          "tag": "EVIDENCE_GUARD:C01_N01:2",
+          "yes": "C01_S07_R_D0027",
+          "no": "C01_S07_R_D0029"
+        },
+        {
+          "id": "C01_S07_R_D0027",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The authenticated job material supports the particular comparison we have described.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0028"
+        },
+        {
+          "id": "C01_S07_R_D0028",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We are not asking for a presumption of automatic appointment.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0013"
+        },
+        {
+          "id": "C01_S07_R_D0029",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Without the verified requirements, we request a fuller explanation of the role and its recruitment criteria.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0030"
+        },
+        {
+          "id": "C01_S07_R_D0030",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the gap without pretending to have conducted the comparison.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0013"
+        },
+        {
+          "id": "C01_S07_R_X0013",
+          "type": "join",
+          "tag": "EVIDENCE_GUARD:C01_N01:2",
+          "next": "C01_S07_R_X0014"
+        },
+        {
+          "id": "C01_S07_R_X0014",
+          "type": "event",
+          "effect": "NEGOTIATION_PHASE_COMPLETE:C01_N01:2",
+          "next": "C01_S07_R_D0031"
+        },
+        {
+          "id": "C01_S07_R_D0031",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The position questions stand. Next we examine the information and negotiation process.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0032"
+        },
+        {
+          "id": "C01_S07_R_D0032",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "We informed employees about the reorganisation. Some of them did not like what they heard.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S07_R_X0015"
+        },
+        {
+          "id": "C01_S07_R_X0015",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "3. Information and procedure — find the weakest unsupported claim in Northbridge’s position.",
+          "options": [
+            {
+              "label": "QUESTION! Ask for the missing distinction",
+              "next": "C01_S07_R_D0033",
+              "effects": [
+                "C01_N01:PHASE_3:QUESTION"
+              ]
+            },
+            {
+              "label": "CHALLENGE! State the supported objection",
+              "next": "C01_S07_R_D0034",
+              "effects": [
+                "C01_N01:PHASE_3:CHALLENGE"
+              ]
+            },
+            {
+              "label": "CONSULT — examine legal limits",
+              "next": "C01_S07_R_D0035",
+              "effects": [
+                "C01_N01:PHASE_3:CONSULT"
+              ]
+            },
+            {
+              "label": "EVIDENCE! Select a permitted record",
+              "next": "C01_S07_V11_EVIDENCE_MENU_C01_N01_3",
+              "effects": [],
+              "evidence_menu": [
+                "C01_E01",
+                "C01_E02",
+                "C01_E03"
+              ]
+            }
+          ],
+          "tag": "NEGOTIATION_PHASE:C01_N01:3"
+        },
+        {
+          "id": "C01_S07_V11_EVIDENCE_MENU_C01_N01_3",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Choose a specific authenticated, relevant record. Unavailable records cannot be presented.",
+          "tag": "PRESENTATION_SELECT:C01_N01:3",
+          "options": [
+            {
+              "label": "Present Dismissal Notice (C01_E01)",
+              "evidence_id": "C01_E01",
+              "next": "C01_S07_R_X0017",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E01"
+              ]
+            },
+            {
+              "label": "Present Employment Contract (C01_E02)",
+              "evidence_id": "C01_E02",
+              "next": "C01_S07_R_X0017",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E02"
+              ]
+            },
+            {
+              "label": "Present Organisation Chart (C01_E03)",
+              "evidence_id": "C01_E03",
+              "next": "C01_S07_R_X0017",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E03"
+              ]
+            },
+            {
+              "label": "Cancel; return to argument",
+              "next": "C01_S07_R_X0015",
+              "effects": []
+            }
+          ],
+          "candidate_status": "RECONSTRUCTED_V1_1_PROPOSAL"
+        },
+        {
+          "id": "C01_S07_R_D0033",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "What documented union negotiation occurred, as distinct from an employee presentation?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0015"
+        },
+        {
+          "id": "C01_S07_R_D0034",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "An announcement to staff does not itself demonstrate fulfilment of the applicable negotiation duty.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0016"
+        },
+        {
+          "id": "C01_S07_R_D0035",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The legal question depends on the decision, applicable relationship and actual process.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0015"
+        },
+        {
+          "id": "C01_S07_R_X0016",
+          "type": "join",
+          "tag": "NEGOTIATION_PHASE:C01_N01:3",
+          "next": "C01_S07_R_X0018"
+        },
+        {
+          "id": "C01_S07_R_X0017",
+          "type": "gate",
+          "test": "phase_evidence:C01_N01:3",
+          "tag": "PRESENTATION_PERMISSION:C01_N01:3",
+          "yes": "C01_S07_R_D0036",
+          "no": "C01_S07_R_D0037"
+        },
+        {
+          "id": "C01_S07_R_D0036",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The available notice or chart supports only the specific communication event it records.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A06",
+          "effects": [
+            "EVIDENCE_PRESENTED:C01_N01:3"
+          ],
+          "next": "C01_S07_R_X0016"
+        },
+        {
+          "id": "C01_S07_R_D0037",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That item does not establish the proposition or is not permitted here. Select another record or use a supported non-documentary challenge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "effects": [
+            "MOMENTUM:-1"
+          ],
+          "next": "C01_S07_R_X0015"
+        },
+        {
+          "id": "C01_S07_R_X0018",
+          "type": "gate",
+          "test": "phase_evidence:C01_N01:3",
+          "tag": "EVIDENCE_GUARD:C01_N01:3",
+          "yes": "C01_S07_R_D0038",
+          "no": "C01_S07_R_D0040"
+        },
+        {
+          "id": "C01_S07_R_D0038",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The available notice or chart supports only the specific communication event it records.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0039"
+        },
+        {
+          "id": "C01_S07_R_D0039",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We will not assume that every meeting was a negotiation.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0019"
+        },
+        {
+          "id": "C01_S07_R_D0040",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The information and negotiation record is incomplete. We request the relevant documentation.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_D0041"
+        },
+        {
+          "id": "C01_S07_R_D0041",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "An unanswered procedural question remains open, not automatically proved.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0019"
+        },
+        {
+          "id": "C01_S07_R_X0019",
+          "type": "join",
+          "tag": "EVIDENCE_GUARD:C01_N01:3",
+          "next": "C01_S07_R_X0020"
+        },
+        {
+          "id": "C01_S07_R_X0020",
+          "type": "event",
+          "effect": "NEGOTIATION_PHASE_COMPLETE:C01_N01:3",
+          "next": "C01_S07_R_D0042"
+        },
+        {
+          "id": "C01_S07_R_D0042",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The requested material is recorded. No one has accepted settlement terms at this stage.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S07_R_X0021"
+        },
+        {
+          "id": "C01_S07_R_X0021",
+          "type": "event",
+          "effect": "NEGOTIATION_COMPLETE:C01_N01",
+          "next": "C01_S07_R_D0043"
+        },
+        {
+          "id": "C01_S07_R_D0043",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S07_R_X0022"
+        },
+        {
+          "id": "C01_S07_R_X0022",
+          "type": "scene_exit",
+          "scene_complete": "C01_S07_COMPLETE",
+          "next_scene": "C01_S08"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S07_I01",
+        "C01_S07_I02",
+        "C01_S07_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S08": {
+      "id": "C01_S08",
+      "background": "BG12",
+      "summary": "P02 compile factual chronology from available documents.",
+      "entry": "C01_S08_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S08_R_D0001",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "This is when Daniel says he saw the new chart. The meeting minutes carry another date.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_D0002"
+        },
+        {
+          "id": "C01_S08_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Which of those dates is documented, and which comes from someone’s recollection?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_D0003"
+        },
+        {
+          "id": "C01_S08_R_D0003",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "If the proposed decision was already approved, the sequence matters to the negotiation-process assessment.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_D0004"
+        },
+        {
+          "id": "C01_S08_R_D0004",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "I remember seeing the chart after the announcement. I cannot tell you when management approved it.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S08_R_D0005"
+        },
+        {
+          "id": "C01_S08_R_D0005",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "That is exactly the limit we record. A timeline becomes useful when it admits what is missing.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0001"
+        },
+        {
+          "id": "C01_S08_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "How should Vera build the restructuring chronology?",
+          "options": [
+            {
+              "label": "Order authenticated events and mark gaps",
+              "next": "C01_S08_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Treat Daniel’s recollection as the approval date",
+              "next": "C01_S08_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Describe a meeting as unanimous employee support",
+              "next": "C01_S08_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S08_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Separate the management minutes, notice and what Daniel remembers. Unknown dates remain unknown.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0002"
+        },
+        {
+          "id": "C01_S08_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Daniel can honestly describe what he saw; he did not say he attended the approval meeting.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0002"
+        },
+        {
+          "id": "C01_S08_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "A meeting record does not document unanimous consent unless it actually establishes that.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0002"
+        },
+        {
+          "id": "C01_S08_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S08_R_D0014"
+        },
+        {
+          "id": "C01_S08_R_D0014",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Check whether these minutes were agreed, corrected or merely drafted.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0006"
+        },
+        {
+          "id": "C01_S08_R_X0006",
+          "type": "gate",
+          "test": "evidence_auth:C01_E07",
+          "tag": "EVIDENCE:C01_E07",
+          "yes": "C01_S08_R_D0015",
+          "no": "C01_S08_R_D0017"
+        },
+        {
+          "id": "C01_S08_R_D0015",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "These verified minutes record the specified meeting discussion; they do not establish every management decision.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_D0016"
+        },
+        {
+          "id": "C01_S08_R_D0016",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0007"
+        },
+        {
+          "id": "C01_S08_R_D0017",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Without authenticated minutes we cannot quote the meeting as a settled record.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_D0018"
+        },
+        {
+          "id": "C01_S08_R_D0018",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0007"
+        },
+        {
+          "id": "C01_S08_R_X0007",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E07",
+          "next": "C01_S08_R_X0008"
+        },
+        {
+          "id": "C01_S08_R_X0008",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E07",
+          "next": "C01_S08_R_D0019"
+        },
+        {
+          "id": "C01_S08_R_D0019",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Sort the notice, planning meetings and chart circulation by verified date.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_D0020"
+        },
+        {
+          "id": "C01_S08_R_D0020",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Arrange the dated notice, management minutes and meetings by confirmed provenance.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S08_R_X0009"
+        },
+        {
+          "id": "C01_S08_R_X0009",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which conclusion does the case record justify?",
+          "options": [
+            {
+              "label": "Documented specific finding",
+              "next": "C01_S08_R_X0011",
+              "effects": []
+            },
+            {
+              "label": "Limited finding (named uncertainty)",
+              "next": "C01_S08_R_X0012",
+              "effects": []
+            },
+            {
+              "label": "Not enough verified information",
+              "next": "C01_S08_V11_INSUFFICIENT_GATE",
+              "effects": []
+            },
+            {
+              "label": "HINT 1 (free)",
+              "next": "C01_S08_R_D0026",
+              "effects": []
+            },
+            {
+              "label": "HINT 2 (free)",
+              "next": "C01_S08_R_D0027",
+              "effects": []
+            },
+            {
+              "label": "HINT 3 (free)",
+              "next": "C01_S08_R_D0028",
+              "effects": []
+            }
+          ],
+          "tag": "PUZZLE:C01_P02"
+        },
+        {
+          "id": "C01_S08_V11_INSUFFICIENT_GATE",
+          "type": "gate",
+          "test": "puzzle_insufficient:C01_P02",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P02:INSUFFICIENT",
+          "yes": "C01_S08_R_D0025",
+          "no": "C01_S08_V11_INSUFFICIENT_CORRECTION"
+        },
+        {
+          "id": "C01_S08_V11_INSUFFICIENT_CORRECTION",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The dated record supports this specific sequence of planning and notification.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0009"
+        },
+        {
+          "id": "C01_S08_R_X0010",
+          "type": "join",
+          "tag": "PUZZLE_RESOLVED:C01_P02",
+          "next": "C01_S08_R_D0029"
+        },
+        {
+          "id": "C01_S08_R_X0011",
+          "type": "gate",
+          "test": "puzzle_full:C01_P02",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P02",
+          "yes": "C01_S08_R_D0021",
+          "no": "C01_S08_R_D0022"
+        },
+        {
+          "id": "C01_S08_R_D0021",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The dated record supports this specific sequence of planning and notification.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0010",
+          "effects": [
+            "C01_P02:SOLVED_FULL"
+          ]
+        },
+        {
+          "id": "C01_S08_R_D0022",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S08_R_X0009"
+        },
+        {
+          "id": "C01_S08_R_X0012",
+          "type": "gate",
+          "test": "puzzle_limited:C01_P02",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P02",
+          "yes": "C01_S08_R_D0023",
+          "no": "C01_S08_R_D0024"
+        },
+        {
+          "id": "C01_S08_R_D0023",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We know some dates but not when the relevant employer decision was actually made.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0010",
+          "effects": [
+            "C01_P02:SOLVED_LIMITED"
+          ]
+        },
+        {
+          "id": "C01_S08_R_D0024",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S08_R_X0009"
+        },
+        {
+          "id": "C01_S08_R_D0025",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The missing approval record remains a question for Northbridge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0010",
+          "effects": [
+            "C01_P02:SOLVED_INSUFFICIENT_EVIDENCE"
+          ]
+        },
+        {
+          "id": "C01_S08_R_D0026",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Which event do you have a dated source for?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0009"
+        },
+        {
+          "id": "C01_S08_R_D0027",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Compare the minutes with the date on Daniel’s notice and the circulated chart.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0009"
+        },
+        {
+          "id": "C01_S08_R_D0028",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Do not insert the employer’s approval date unless a source establishes it; a partial chronology is still useful.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S08_R_X0009"
+        },
+        {
+          "id": "C01_S08_R_D0029",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The conclusion and any remaining uncertainty are now recorded for the next stage.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S08_R_X0013"
+        },
+        {
+          "id": "C01_S08_R_X0013",
+          "type": "event",
+          "effect": "PUZZLE_COMPLETE:C01_P02",
+          "next": "C01_S08_V11_E06_GENERATED"
+        },
+        {
+          "id": "C01_S08_V11_E06_GENERATED",
+          "type": "event",
+          "effect": "EVIDENCE_GENERATED:C01_E06",
+          "next": "C01_S08_R_D0030",
+          "note": "Source record contains only verified entries plus explicit unknowns; generated after P02 completion."
+        },
+        {
+          "id": "C01_S08_R_D0030",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S08_R_X0014"
+        },
+        {
+          "id": "C01_S08_R_X0014",
+          "type": "scene_exit",
+          "scene_complete": "C01_S08_COMPLETE",
+          "next_scene": "C01_S09"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S08_I01",
+        "C01_S08_I02",
+        "C01_S08_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE",
+      "retired_v1_0_nodes": [
+        "C01_S08_R_D0009",
+        "C01_S08_R_D0010",
+        "C01_S08_R_D0011",
+        "C01_S08_R_D0012",
+        "C01_S08_R_D0013",
+        "C01_S08_R_X0003",
+        "C01_S08_R_X0004",
+        "C01_S08_R_X0005"
+      ]
+    },
+    "C01_S09": {
+      "id": "C01_S09",
+      "background": "BG02",
+      "summary": "P03 documentary corroboration; Nina chooses whether to provide a formal statement.",
+      "entry": "C01_S09_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S09_R_D0001",
+          "type": "line",
+          "speaker": "SUP_NINA",
+          "text": "I attended the planning meeting. Now I have been asked to sign a statement about it, and I am worried about how it will be used.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S09_R_D0002"
+        },
+        {
+          "id": "C01_S09_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "You do not owe us a statement. We can explain the request, then you decide whether to provide one.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_D0003"
+        },
+        {
+          "id": "C01_S09_R_D0003",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "And there is no inference against Nina if she declines. The documentary enquiry continues either way.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_D0004"
+        },
+        {
+          "id": "C01_S09_R_D0004",
+          "type": "line",
+          "speaker": "SUP_NINA",
+          "text": "Could the employer see my entire statement, including the parts about my colleagues?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S09_R_D0005"
+        },
+        {
+          "id": "C01_S09_R_D0005",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We need to discuss the purpose and recipients before you decide. We cannot promise absolute secrecy if material is legitimately presented in a dispute.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0001"
+        },
+        {
+          "id": "C01_S09_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Nina asks whether a formal statement is required. How do we proceed?",
+          "options": [
+            {
+              "label": "Explain voluntary participation",
+              "next": "C01_S09_R_D0006",
+              "effects": [
+                "WITNESS_CONSENT_OPTIONAL:NINA"
+              ]
+            },
+            {
+              "label": "Pressure them to testify",
+              "next": "C01_S09_R_D0007",
+              "effects": [
+                "WITNESS_PRESSURE_REJECTED:NINA"
+              ]
+            },
+            {
+              "label": "Treat silence as proof",
+              "next": "C01_S09_R_D0008",
+              "effects": [
+                "WITNESS_INFERENCE_REJECTED:NINA"
+              ]
+            }
+          ],
+          "tag": "VOLUNTARY_WITNESS"
+        },
+        {
+          "id": "C01_S09_R_D0006",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We can explain what a statement would be used for, who may see it, and how you can decide whether to contribute. The decision stays with Nina.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0002"
+        },
+        {
+          "id": "C01_S09_R_D0007",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "No. A hesitant witness is not a machine for producing our evidence.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0002"
+        },
+        {
+          "id": "C01_S09_R_D0008",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Silence proves neither the employer’s account nor ours. We go back to the documents.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0002"
+        },
+        {
+          "id": "C01_S09_R_X0002",
+          "type": "join",
+          "tag": "VOLUNTARY_WITNESS",
+          "next": "C01_S09_R_X0003"
+        },
+        {
+          "id": "C01_S09_R_X0003",
+          "type": "gate",
+          "test": "witness_consent:NINA",
+          "tag": "CONSENT_OPTIONAL",
+          "yes": "C01_S09_R_D0009",
+          "no": "C01_S09_R_D0011",
+          "external_decision_contract": {
+            "decision_owner": "NINA",
+            "captured_by": "independent witness consent interface, not by Vera player choice",
+            "scope": "formal statement for the specified case use; no blanket publication",
+            "on_decline": "C01_E08 cannot be presented",
+            "source": "Nina voluntary decision record"
+          }
+        },
+        {
+          "id": "C01_S09_R_D0009",
+          "type": "line",
+          "speaker": "SUP_NINA",
+          "text": "I have read the explanation. I am willing to give a limited statement about the meeting I attended.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S09_R_D0010"
+        },
+        {
+          "id": "C01_S09_R_D0010",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We will record the scope, verify the statement, and protect information not needed for this dispute.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0004"
+        },
+        {
+          "id": "C01_S09_R_D0011",
+          "type": "line",
+          "speaker": "SUP_NINA",
+          "text": "I would rather not give a formal statement.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S09_R_D0012"
+        },
+        {
+          "id": "C01_S09_R_D0012",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Understood. You do not have to justify that choice to us. We will continue with the independent records.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0004"
+        },
+        {
+          "id": "C01_S09_R_X0004",
+          "type": "join",
+          "tag": "CONSENT_OPTIONAL",
+          "next": "C01_S09_R_X0005"
+        },
+        {
+          "id": "C01_S09_R_X0005",
+          "type": "event",
+          "effect": "WITNESS_DECISION_RECORDED:NINA",
+          "next": "C01_S09_R_X0006"
+        },
+        {
+          "id": "C01_S09_R_X0006",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "How should Vera respond to Nina’s uncertainty?",
+          "options": [
+            {
+              "label": "Explain purpose and leave the decision to Nina",
+              "next": "C01_S09_R_D0013",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "Make Nina’s statement mandatory to win",
+              "next": "C01_S09_R_D0014",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "Use her hesitation as evidence against Northbridge",
+              "next": "C01_S09_R_D0015",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S09_R_D0013",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Explain who may see a statement and what it may be used for. Nina makes the decision.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0007"
+        },
+        {
+          "id": "C01_S09_R_D0014",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Her choice is voluntary. A compulsory testimony gate would be inappropriate.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0007"
+        },
+        {
+          "id": "C01_S09_R_D0015",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "Hesitation is not evidence of wrongdoing or agreement.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0007"
+        },
+        {
+          "id": "C01_S09_R_X0007",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S09_R_X0008"
+        },
+        {
+          "id": "C01_S09_R_X0008",
+          "type": "gate",
+          "test": "witness_consent:NINA",
+          "tag": "WITNESS_EVIDENCE",
+          "yes": "C01_S09_R_D0016",
+          "no": "C01_S09_R_D0017"
+        },
+        {
+          "id": "C01_S09_R_D0016",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "A voluntary formal statement is potentially available, but it still requires source verification.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S09_R_X0009"
+        },
+        {
+          "id": "C01_S09_R_D0017",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "No formal statement will be acquired. Continue through independent evidence or the insufficient-evidence route.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S09_R_X0009"
+        },
+        {
+          "id": "C01_S09_R_X0009",
+          "type": "join",
+          "tag": "WITNESS_EVIDENCE",
+          "next": "C01_S09_R_D0018"
+        },
+        {
+          "id": "C01_S09_R_D0018",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Only use a statement if Nina chose to give one and its scope permits this use.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0010"
+        },
+        {
+          "id": "C01_S09_R_X0010",
+          "type": "gate",
+          "test": "all:witness_consent:NINA,evidence_auth:C01_E08",
+          "tag": "EVIDENCE:C01_E08",
+          "yes": "C01_S09_R_D0019",
+          "no": "C01_S09_R_D0021"
+        },
+        {
+          "id": "C01_S09_R_D0019",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Nina’s authenticated statement supports only her stated firsthand observations.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_D0020"
+        },
+        {
+          "id": "C01_S09_R_D0020",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0011"
+        },
+        {
+          "id": "C01_S09_R_D0021",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "No authorised statement is available. Her decision cannot be replaced by our guess.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_D0022"
+        },
+        {
+          "id": "C01_S09_R_D0022",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0011"
+        },
+        {
+          "id": "C01_S09_R_X0011",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E08",
+          "next": "C01_S09_R_X0012"
+        },
+        {
+          "id": "C01_S09_R_X0012",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E08",
+          "next": "C01_S09_R_D0023"
+        },
+        {
+          "id": "C01_S09_R_D0023",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Test which parts of the account are corroborated by documents alone.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_D0024"
+        },
+        {
+          "id": "C01_S09_R_D0024",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Use records independently of Nina’s voluntary testimony.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S09_R_X0013"
+        },
+        {
+          "id": "C01_S09_R_X0013",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which conclusion does the case record justify?",
+          "options": [
+            {
+              "label": "Documented specific finding",
+              "next": "C01_S09_R_X0015",
+              "effects": []
+            },
+            {
+              "label": "Limited finding (named uncertainty)",
+              "next": "C01_S09_R_X0016",
+              "effects": []
+            },
+            {
+              "label": "Not enough verified information",
+              "next": "C01_S09_V11_INSUFFICIENT_GATE",
+              "effects": []
+            },
+            {
+              "label": "HINT 1 (free)",
+              "next": "C01_S09_R_D0030",
+              "effects": []
+            },
+            {
+              "label": "HINT 2 (free)",
+              "next": "C01_S09_R_D0031",
+              "effects": []
+            },
+            {
+              "label": "HINT 3 (free)",
+              "next": "C01_S09_R_D0032",
+              "effects": []
+            }
+          ],
+          "tag": "PUZZLE:C01_P03"
+        },
+        {
+          "id": "C01_S09_V11_INSUFFICIENT_GATE",
+          "type": "gate",
+          "test": "puzzle_insufficient:C01_P03",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P03:INSUFFICIENT",
+          "yes": "C01_S09_R_D0029",
+          "no": "C01_S09_V11_INSUFFICIENT_CORRECTION"
+        },
+        {
+          "id": "C01_S09_V11_INSUFFICIENT_CORRECTION",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The independent documents corroborate the stated event without requiring Nina to testify.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0013"
+        },
+        {
+          "id": "C01_S09_R_X0014",
+          "type": "join",
+          "tag": "PUZZLE_RESOLVED:C01_P03",
+          "next": "C01_S09_R_D0033"
+        },
+        {
+          "id": "C01_S09_R_X0015",
+          "type": "gate",
+          "test": "puzzle_full:C01_P03",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P03",
+          "yes": "C01_S09_R_D0025",
+          "no": "C01_S09_R_D0026"
+        },
+        {
+          "id": "C01_S09_R_D0025",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The independent documents corroborate the stated event without requiring Nina to testify.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0014",
+          "effects": [
+            "C01_P03:SOLVED_FULL"
+          ]
+        },
+        {
+          "id": "C01_S09_R_D0026",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S09_R_X0013"
+        },
+        {
+          "id": "C01_S09_R_X0016",
+          "type": "gate",
+          "test": "puzzle_limited:C01_P03",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P03",
+          "yes": "C01_S09_R_D0027",
+          "no": "C01_S09_R_D0028"
+        },
+        {
+          "id": "C01_S09_R_D0027",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The documentary record supports only part of the allegation.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0014",
+          "effects": [
+            "C01_P03:SOLVED_LIMITED"
+          ]
+        },
+        {
+          "id": "C01_S09_R_D0028",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S09_R_X0013"
+        },
+        {
+          "id": "C01_S09_R_D0029",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "If the sources do not establish the point, describe the exact gap; Nina’s refusal cannot fill it.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0014",
+          "effects": [
+            "C01_P03:SOLVED_INSUFFICIENT_EVIDENCE"
+          ]
+        },
+        {
+          "id": "C01_S09_R_D0030",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Set Nina’s optional testimony aside first. What can the documents prove?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0013"
+        },
+        {
+          "id": "C01_S09_R_D0031",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Check independent minutes and correspondence, not what you hope a witness would say.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0013"
+        },
+        {
+          "id": "C01_S09_R_D0032",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "A limited documentary conclusion is possible even if Nina declines. Never label her silence corroboration.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S09_R_X0013"
+        },
+        {
+          "id": "C01_S09_R_D0033",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The conclusion and any remaining uncertainty are now recorded for the next stage.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S09_R_X0017"
+        },
+        {
+          "id": "C01_S09_R_X0017",
+          "type": "event",
+          "effect": "PUZZLE_COMPLETE:C01_P03",
+          "next": "C01_S09_R_D0034"
+        },
+        {
+          "id": "C01_S09_R_D0034",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S09_R_X0018"
+        },
+        {
+          "id": "C01_S09_R_X0018",
+          "type": "scene_exit",
+          "scene_complete": "C01_S09_COMPLETE",
+          "next_scene": "C01_S10"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S09_I01",
+        "C01_S09_I02",
+        "C01_S09_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S10": {
+      "id": "C01_S10",
+      "background": "BG12",
+      "summary": "P04 redeployment assessment and alternatives; explicit gaps.",
+      "entry": "C01_S10_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S10_R_D0001",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "They say there was nowhere else for me. Why does every vacancy suddenly require a skill that nobody here has?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S10_R_D0002"
+        },
+        {
+          "id": "C01_S10_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The question is not whether an advertisement looks unfair. It is whether Northbridge reasonably examined other work for Daniel.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_D0003"
+        },
+        {
+          "id": "C01_S10_R_D0003",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We have some role descriptions. We do not necessarily have all current vacancies or their requirements.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_D0004"
+        },
+        {
+          "id": "C01_S10_R_D0004",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Then we mark what the company has shown, what Daniel can do, and the decisions we still need explained.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_D0005"
+        },
+        {
+          "id": "C01_S10_R_D0005",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "An unresolved question is a strong reason to ask again—not permission to invent a favourable answer.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S10_R_X0001"
+        },
+        {
+          "id": "C01_S10_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which redeployment issue should Vera take to the final meeting?",
+          "options": [
+            {
+              "label": "The vacancies, requirements and documented assessment",
+              "next": "C01_S10_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "A guarantee that Daniel is entitled to the advertised job",
+              "next": "C01_S10_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "A conclusion that Northbridge considered no alternatives",
+              "next": "C01_S10_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S10_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Ask Northbridge which alternatives it considered and why particular roles were considered suitable or unsuitable.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0002"
+        },
+        {
+          "id": "C01_S10_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "An overlap finding raises a question; it does not award the vacancy automatically.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0002"
+        },
+        {
+          "id": "C01_S10_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "Without a complete assessment we cannot state that no alternatives were examined.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0002"
+        },
+        {
+          "id": "C01_S10_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S10_R_D0009"
+        },
+        {
+          "id": "C01_S10_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Examine what Northbridge actually recorded about possible reassignment.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0003"
+        },
+        {
+          "id": "C01_S10_R_X0003",
+          "type": "gate",
+          "test": "evidence_auth:C01_E09",
+          "tag": "EVIDENCE:C01_E09",
+          "yes": "C01_S10_R_D0010",
+          "no": "C01_S10_R_D0012"
+        },
+        {
+          "id": "C01_S10_R_D0010",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The assessment establishes the steps and reasoning it documents; any missing alternatives remain questions.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_D0011"
+        },
+        {
+          "id": "C01_S10_R_D0011",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0004"
+        },
+        {
+          "id": "C01_S10_R_D0012",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Without the assessment we cannot assert which positions were excluded or why.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_D0013"
+        },
+        {
+          "id": "C01_S10_R_D0013",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0004"
+        },
+        {
+          "id": "C01_S10_R_X0004",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E09",
+          "next": "C01_S10_R_X0005"
+        },
+        {
+          "id": "C01_S10_R_X0005",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E09",
+          "next": "C01_S10_R_D0014"
+        },
+        {
+          "id": "C01_S10_R_D0014",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Assess vacancies, Daniel’s qualifications and Northbridge’s documented considerations separately.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_D0015"
+        },
+        {
+          "id": "C01_S10_R_D0015",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Compare available roles and qualifications before applying the legal framework.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S10_R_X0006"
+        },
+        {
+          "id": "C01_S10_R_X0006",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which conclusion does the case record justify?",
+          "options": [
+            {
+              "label": "Documented specific finding",
+              "next": "C01_S10_R_X0008",
+              "effects": []
+            },
+            {
+              "label": "Limited finding (named uncertainty)",
+              "next": "C01_S10_R_X0009",
+              "effects": []
+            },
+            {
+              "label": "Not enough verified information",
+              "next": "C01_S10_V11_INSUFFICIENT_GATE",
+              "effects": []
+            },
+            {
+              "label": "HINT 1 (free)",
+              "next": "C01_S10_R_D0021",
+              "effects": []
+            },
+            {
+              "label": "HINT 2 (free)",
+              "next": "C01_S10_R_D0022",
+              "effects": []
+            },
+            {
+              "label": "HINT 3 (free)",
+              "next": "C01_S10_R_D0023",
+              "effects": []
+            }
+          ],
+          "tag": "PUZZLE:C01_P04"
+        },
+        {
+          "id": "C01_S10_V11_INSUFFICIENT_GATE",
+          "type": "gate",
+          "test": "puzzle_insufficient:C01_P04",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P04:INSUFFICIENT",
+          "yes": "C01_S10_R_D0020",
+          "no": "C01_S10_V11_INSUFFICIENT_CORRECTION"
+        },
+        {
+          "id": "C01_S10_V11_INSUFFICIENT_CORRECTION",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The available records support a defined finding about the reassignment assessment, not an automatic job offer.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0006"
+        },
+        {
+          "id": "C01_S10_R_X0007",
+          "type": "join",
+          "tag": "PUZZLE_RESOLVED:C01_P04",
+          "next": "C01_S10_R_D0024"
+        },
+        {
+          "id": "C01_S10_R_X0008",
+          "type": "gate",
+          "test": "puzzle_full:C01_P04",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P04",
+          "yes": "C01_S10_R_D0016",
+          "no": "C01_S10_R_D0017"
+        },
+        {
+          "id": "C01_S10_R_D0016",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The available records support a defined finding about the reassignment assessment, not an automatic job offer.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0007",
+          "effects": [
+            "C01_P04:SOLVED_FULL"
+          ]
+        },
+        {
+          "id": "C01_S10_R_D0017",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S10_R_X0006"
+        },
+        {
+          "id": "C01_S10_R_X0009",
+          "type": "gate",
+          "test": "puzzle_limited:C01_P04",
+          "tag": "PUZZLE_RESULT_GUARD:C01_P04",
+          "yes": "C01_S10_R_D0018",
+          "no": "C01_S10_R_D0019"
+        },
+        {
+          "id": "C01_S10_R_D0018",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Some alternatives appear in the record, but the suitability reasoning is incomplete.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0007",
+          "effects": [
+            "C01_P04:SOLVED_LIMITED"
+          ]
+        },
+        {
+          "id": "C01_S10_R_D0019",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That conclusion exceeds the available sources. Use a narrower finding instead.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S10_R_X0006"
+        },
+        {
+          "id": "C01_S10_R_D0020",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "A missing suitability analysis requires a question, not a finding that reassignment was impossible.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0007",
+          "effects": [
+            "C01_P04:SOLVED_INSUFFICIENT_EVIDENCE"
+          ]
+        },
+        {
+          "id": "C01_S10_R_D0021",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "List vacancies first, then compare requirements to Daniel’s documented skills.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0006"
+        },
+        {
+          "id": "C01_S10_R_D0022",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Which alternatives did Northbridge actually examine—and which are only mentioned?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0006"
+        },
+        {
+          "id": "C01_S10_R_D0023",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "If alternatives were not documented, report the omission without assuming an entitlement to a particular role.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S10_R_X0006"
+        },
+        {
+          "id": "C01_S10_R_D0024",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The conclusion and any remaining uncertainty are now recorded for the next stage.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S10_R_X0010"
+        },
+        {
+          "id": "C01_S10_R_X0010",
+          "type": "event",
+          "effect": "PUZZLE_COMPLETE:C01_P04",
+          "next": "C01_S10_R_D0025"
+        },
+        {
+          "id": "C01_S10_R_D0025",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S10_R_X0011"
+        },
+        {
+          "id": "C01_S10_R_X0011",
+          "type": "scene_exit",
+          "scene_complete": "C01_S10_COMPLETE",
+          "next_scene": "C01_S11"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S10_I01",
+        "C01_S10_I02",
+        "C01_S10_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S11": {
+      "id": "C01_S11",
+      "background": "BG03",
+      "summary": "N02 final negotiation, evidence variants and three authorised resolutions.",
+      "entry": "C01_S11_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S11_R_D0001",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "Northbridge has reviewed UWF’s questions. I hope we can end this without turning every organisation chart into a public trial.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0002"
+        },
+        {
+          "id": "C01_S11_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We can end it only on terms the parties are actually authorised to accept.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0003"
+        },
+        {
+          "id": "C01_S11_R_D0003",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "And after Daniel has seen any proposal touching his own rights.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_R_D0004"
+        },
+        {
+          "id": "C01_S11_R_D0004",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "I would appreciate an agreement that says something more substantial than “everyone agrees to move on.”",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0005"
+        },
+        {
+          "id": "C01_S11_R_D0005",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Then we shall examine the facts, the remaining uncertainties and the words of the offer itself.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0001"
+        },
+        {
+          "id": "C01_S11_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "What should Vera insist on before any signature?",
+          "options": [
+            {
+              "label": "Identified terms and matching acceptance authority",
+              "next": "C01_S11_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "A declaration that every dispute is settled",
+              "next": "C01_S11_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "An agreement signed without Daniel reading it",
+              "next": "C01_S11_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S11_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Read every commitment and verify the exact authority of employer, UWF and Daniel.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0002"
+        },
+        {
+          "id": "C01_S11_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "An agreement cannot settle unspecified claims by implication.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0002"
+        },
+        {
+          "id": "C01_S11_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "Daniel must approve any individual arrangement affecting his rights.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0002"
+        },
+        {
+          "id": "C01_S11_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S11_R_D0009"
+        },
+        {
+          "id": "C01_S11_R_D0009",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Negotiation C01_N02 begins at Momentum five. We will use evidence only within its verified scope.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S11_R_D0010"
+        },
+        {
+          "id": "C01_S11_R_D0010",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "The new role has different requirements. Similar duties cannot decide who is suitable.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_R_X0003"
+        },
+        {
+          "id": "C01_S11_R_X0003",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "1. Position — find the weakest unsupported claim in Northbridge’s position.",
+          "options": [
+            {
+              "label": "QUESTION! Ask for the missing distinction",
+              "next": "C01_S11_R_D0011",
+              "effects": [
+                "C01_N02:PHASE_1:QUESTION"
+              ]
+            },
+            {
+              "label": "CHALLENGE! State the supported objection",
+              "next": "C01_S11_R_D0012",
+              "effects": [
+                "C01_N02:PHASE_1:CHALLENGE"
+              ]
+            },
+            {
+              "label": "CONSULT — examine legal limits",
+              "next": "C01_S11_R_D0013",
+              "effects": [
+                "C01_N02:PHASE_1:CONSULT"
+              ]
+            },
+            {
+              "label": "EVIDENCE! Select a permitted record",
+              "next": "C01_S11_V11_EVIDENCE_MENU_C01_N02_1",
+              "effects": [],
+              "evidence_menu": [
+                "C01_E04",
+                "C01_E05"
+              ]
+            }
+          ],
+          "tag": "NEGOTIATION_PHASE:C01_N02:1"
+        },
+        {
+          "id": "C01_S11_V11_EVIDENCE_MENU_C01_N02_1",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Choose a specific authenticated, relevant record. Unavailable records cannot be presented.",
+          "tag": "PRESENTATION_SELECT:C01_N02:1",
+          "options": [
+            {
+              "label": "Present Recruitment Advertisement (C01_E04)",
+              "evidence_id": "C01_E04",
+              "next": "C01_S11_R_X0005",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E04"
+              ]
+            },
+            {
+              "label": "Present New Position Description (C01_E05)",
+              "evidence_id": "C01_E05",
+              "next": "C01_S11_R_X0005",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E05"
+              ]
+            },
+            {
+              "label": "Cancel; return to argument",
+              "next": "C01_S11_R_X0003",
+              "effects": []
+            }
+          ],
+          "candidate_status": "RECONSTRUCTED_V1_1_PROPOSAL"
+        },
+        {
+          "id": "C01_S11_R_D0011",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Please identify the decisive requirement in the posted role.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0003"
+        },
+        {
+          "id": "C01_S11_R_D0012",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The advertisement and description show some continuing functions; they do not prove the entire suitability assessment.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0004"
+        },
+        {
+          "id": "C01_S11_R_D0013",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "State the supported overlap and ask for Northbridge’s reasoning about each material difference.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0003"
+        },
+        {
+          "id": "C01_S11_R_X0004",
+          "type": "join",
+          "tag": "NEGOTIATION_PHASE:C01_N02:1",
+          "next": "C01_S11_R_X0006"
+        },
+        {
+          "id": "C01_S11_R_X0005",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:1",
+          "tag": "PRESENTATION_PERMISSION:C01_N02:1",
+          "yes": "C01_S11_R_D0014",
+          "no": "C01_S11_R_D0015"
+        },
+        {
+          "id": "C01_S11_R_D0014",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "These verified records identify the duties or requirements we can actually compare.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A06",
+          "effects": [
+            "EVIDENCE_PRESENTED:C01_N02:1"
+          ],
+          "next": "C01_S11_R_X0004"
+        },
+        {
+          "id": "C01_S11_R_D0015",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That item does not establish the proposition or is not permitted here. Select another record or use a supported non-documentary challenge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "effects": [
+            "MOMENTUM:-1"
+          ],
+          "next": "C01_S11_R_X0003"
+        },
+        {
+          "id": "C01_S11_R_X0006",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:1",
+          "tag": "EVIDENCE_GUARD:C01_N02:1",
+          "yes": "C01_S11_R_D0016",
+          "no": "C01_S11_R_D0018"
+        },
+        {
+          "id": "C01_S11_R_D0016",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "These verified records identify the duties or requirements we can actually compare.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0017"
+        },
+        {
+          "id": "C01_S11_R_D0017",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "The employment consequence must be evaluated using the relevant circumstances.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0007"
+        },
+        {
+          "id": "C01_S11_R_D0018",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Without the underlying descriptions, we cannot assert a complete match. We ask for them.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0019"
+        },
+        {
+          "id": "C01_S11_R_D0019",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "That limitation will be included in the written position.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0007"
+        },
+        {
+          "id": "C01_S11_R_X0007",
+          "type": "join",
+          "tag": "EVIDENCE_GUARD:C01_N02:1",
+          "next": "C01_S11_R_X0008"
+        },
+        {
+          "id": "C01_S11_R_X0008",
+          "type": "event",
+          "effect": "NEGOTIATION_PHASE_COMPLETE:C01_N02:1",
+          "next": "C01_S11_R_D0020"
+        },
+        {
+          "id": "C01_S11_R_D0020",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We have defined the position issue. Now address the documented sequence.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0021"
+        },
+        {
+          "id": "C01_S11_R_D0021",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "Planning is not the same thing as deciding. You cannot just draw arrows between dates and accuse us.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_R_X0009"
+        },
+        {
+          "id": "C01_S11_R_X0009",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "2. Chronology — find the weakest unsupported claim in Northbridge’s position.",
+          "options": [
+            {
+              "label": "QUESTION! Ask for the missing distinction",
+              "next": "C01_S11_R_D0022",
+              "effects": [
+                "C01_N02:PHASE_2:QUESTION"
+              ]
+            },
+            {
+              "label": "CHALLENGE! State the supported objection",
+              "next": "C01_S11_R_D0023",
+              "effects": [
+                "C01_N02:PHASE_2:CHALLENGE"
+              ]
+            },
+            {
+              "label": "CONSULT — examine legal limits",
+              "next": "C01_S11_R_D0024",
+              "effects": [
+                "C01_N02:PHASE_2:CONSULT"
+              ]
+            },
+            {
+              "label": "EVIDENCE! Select a permitted record",
+              "next": "C01_S11_V11_EVIDENCE_MENU_C01_N02_2",
+              "effects": [],
+              "evidence_menu": [
+                "C01_E06",
+                "C01_E07"
+              ]
+            }
+          ],
+          "tag": "NEGOTIATION_PHASE:C01_N02:2"
+        },
+        {
+          "id": "C01_S11_V11_EVIDENCE_MENU_C01_N02_2",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Choose a specific authenticated, relevant record. Unavailable records cannot be presented.",
+          "tag": "PRESENTATION_SELECT:C01_N02:2",
+          "options": [
+            {
+              "label": "Present Restructuring Timeline (C01_E06)",
+              "evidence_id": "C01_E06",
+              "next": "C01_S11_R_X0011",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E06"
+              ]
+            },
+            {
+              "label": "Present Meeting Minutes (C01_E07)",
+              "evidence_id": "C01_E07",
+              "next": "C01_S11_R_X0011",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E07"
+              ]
+            },
+            {
+              "label": "Cancel; return to argument",
+              "next": "C01_S11_R_X0009",
+              "effects": []
+            }
+          ],
+          "candidate_status": "RECONSTRUCTED_V1_1_PROPOSAL"
+        },
+        {
+          "id": "C01_S11_R_D0022",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Please identify which management act the minutes describe.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0009"
+        },
+        {
+          "id": "C01_S11_R_D0023",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The union’s chronology distinguishes proposals, communications and decisions.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0010"
+        },
+        {
+          "id": "C01_S11_R_D0024",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Explain what each dated event proves and what remains to be checked.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0009"
+        },
+        {
+          "id": "C01_S11_R_X0010",
+          "type": "join",
+          "tag": "NEGOTIATION_PHASE:C01_N02:2",
+          "next": "C01_S11_R_X0012"
+        },
+        {
+          "id": "C01_S11_R_X0011",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:2",
+          "tag": "PRESENTATION_PERMISSION:C01_N02:2",
+          "yes": "C01_S11_R_D0025",
+          "no": "C01_S11_R_D0026"
+        },
+        {
+          "id": "C01_S11_R_D0025",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The verified timeline supports only its sourced events and stated gaps.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A06",
+          "effects": [
+            "EVIDENCE_PRESENTED:C01_N02:2"
+          ],
+          "next": "C01_S11_R_X0010"
+        },
+        {
+          "id": "C01_S11_R_D0026",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That item does not establish the proposition or is not permitted here. Select another record or use a supported non-documentary challenge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "effects": [
+            "MOMENTUM:-1"
+          ],
+          "next": "C01_S11_R_X0009"
+        },
+        {
+          "id": "C01_S11_R_X0012",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:2",
+          "tag": "EVIDENCE_GUARD:C01_N02:2",
+          "yes": "C01_S11_R_D0027",
+          "no": "C01_S11_R_D0029"
+        },
+        {
+          "id": "C01_S11_R_D0027",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The verified timeline supports only its sourced events and stated gaps.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0028"
+        },
+        {
+          "id": "C01_S11_R_D0028",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "A timeline is useful even when it does not prove a legal breach.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0013"
+        },
+        {
+          "id": "C01_S11_R_D0029",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Without authenticated approval records we can describe the gap, not the timing of a final decision.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0030"
+        },
+        {
+          "id": "C01_S11_R_D0030",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The unanswered decision question remains in our request.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0013"
+        },
+        {
+          "id": "C01_S11_R_X0013",
+          "type": "join",
+          "tag": "EVIDENCE_GUARD:C01_N02:2",
+          "next": "C01_S11_R_X0014"
+        },
+        {
+          "id": "C01_S11_R_X0014",
+          "type": "event",
+          "effect": "NEGOTIATION_PHASE_COMPLETE:C01_N02:2",
+          "next": "C01_S11_R_D0031"
+        },
+        {
+          "id": "C01_S11_R_D0031",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We have a defensible chronology position. Next, corroboration.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0032"
+        },
+        {
+          "id": "C01_S11_R_D0032",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "Your account depends on people remembering conversations differently.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_R_X0015"
+        },
+        {
+          "id": "C01_S11_R_X0015",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "3. Nina corroboration — find the weakest unsupported claim in Northbridge’s position.",
+          "options": [
+            {
+              "label": "QUESTION! Ask for the missing distinction",
+              "next": "C01_S11_R_D0033",
+              "effects": [
+                "C01_N02:PHASE_3:QUESTION"
+              ]
+            },
+            {
+              "label": "CHALLENGE! State the supported objection",
+              "next": "C01_S11_R_D0034",
+              "effects": [
+                "C01_N02:PHASE_3:CHALLENGE"
+              ]
+            },
+            {
+              "label": "CONSULT — examine legal limits",
+              "next": "C01_S11_R_D0035",
+              "effects": [
+                "C01_N02:PHASE_3:CONSULT"
+              ]
+            },
+            {
+              "label": "EVIDENCE! Select a permitted record",
+              "next": "C01_S11_V11_EVIDENCE_MENU_C01_N02_3",
+              "effects": [],
+              "evidence_menu": [
+                "C01_E07",
+                "C01_E08"
+              ]
+            }
+          ],
+          "tag": "NEGOTIATION_PHASE:C01_N02:3"
+        },
+        {
+          "id": "C01_S11_V11_EVIDENCE_MENU_C01_N02_3",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Choose a specific authenticated, relevant record. Unavailable records cannot be presented.",
+          "tag": "PRESENTATION_SELECT:C01_N02:3",
+          "options": [
+            {
+              "label": "Present Meeting Minutes (C01_E07)",
+              "evidence_id": "C01_E07",
+              "next": "C01_S11_R_X0017",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E07"
+              ]
+            },
+            {
+              "label": "Present Nina Formal Statement (C01_E08)",
+              "evidence_id": "C01_E08",
+              "next": "C01_S11_R_X0017",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E08"
+              ]
+            },
+            {
+              "label": "Cancel; return to argument",
+              "next": "C01_S11_R_X0015",
+              "effects": []
+            }
+          ],
+          "candidate_status": "RECONSTRUCTED_V1_1_PROPOSAL"
+        },
+        {
+          "id": "C01_S11_R_D0033",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Which event is supported by the minutes, rather than somebody’s recollection?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0015"
+        },
+        {
+          "id": "C01_S11_R_D0034",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Even without Nina’s statement, the written record can support specific points.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0016"
+        },
+        {
+          "id": "C01_S11_R_D0035",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We should present the documentary claim, not imply an absent witness agreed with it.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0015"
+        },
+        {
+          "id": "C01_S11_R_X0016",
+          "type": "join",
+          "tag": "NEGOTIATION_PHASE:C01_N02:3",
+          "next": "C01_S11_R_X0018"
+        },
+        {
+          "id": "C01_S11_R_X0017",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:3",
+          "tag": "PRESENTATION_PERMISSION:C01_N02:3",
+          "yes": "C01_S11_R_D0036",
+          "no": "C01_S11_R_D0037"
+        },
+        {
+          "id": "C01_S11_R_D0036",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The verified minutes or authorised statement supports only the part actually witnessed or recorded.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A06",
+          "effects": [
+            "EVIDENCE_PRESENTED:C01_N02:3"
+          ],
+          "next": "C01_S11_R_X0016"
+        },
+        {
+          "id": "C01_S11_R_D0037",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That item does not establish the proposition or is not permitted here. Select another record or use a supported non-documentary challenge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "effects": [
+            "MOMENTUM:-1"
+          ],
+          "next": "C01_S11_R_X0015"
+        },
+        {
+          "id": "C01_S11_R_X0018",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:3",
+          "tag": "EVIDENCE_GUARD:C01_N02:3",
+          "yes": "C01_S11_R_D0038",
+          "no": "C01_S11_R_D0040"
+        },
+        {
+          "id": "C01_S11_R_D0038",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The verified minutes or authorised statement supports only the part actually witnessed or recorded.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0039"
+        },
+        {
+          "id": "C01_S11_R_D0039",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "If Nina declined, do not present or quote a formal statement.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0019"
+        },
+        {
+          "id": "C01_S11_R_D0040",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Without independent corroboration, we leave the disputed event unresolved.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0041"
+        },
+        {
+          "id": "C01_S11_R_D0041",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The lack of a statement does not count against Nina or decide the issue for Northbridge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0019"
+        },
+        {
+          "id": "C01_S11_R_X0019",
+          "type": "join",
+          "tag": "EVIDENCE_GUARD:C01_N02:3",
+          "next": "C01_S11_R_X0020"
+        },
+        {
+          "id": "C01_S11_R_X0020",
+          "type": "event",
+          "effect": "NEGOTIATION_PHASE_COMPLETE:C01_N02:3",
+          "next": "C01_S11_R_D0042"
+        },
+        {
+          "id": "C01_S11_R_D0042",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Our corroboration finding is recorded with its source limits.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0043"
+        },
+        {
+          "id": "C01_S11_R_D0043",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "Northbridge concluded there was no reasonable alternative position available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_R_X0021"
+        },
+        {
+          "id": "C01_S11_R_X0021",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "4. Redeployment — find the weakest unsupported claim in Northbridge’s position.",
+          "options": [
+            {
+              "label": "QUESTION! Ask for the missing distinction",
+              "next": "C01_S11_R_D0044",
+              "effects": [
+                "C01_N02:PHASE_4:QUESTION"
+              ]
+            },
+            {
+              "label": "CHALLENGE! State the supported objection",
+              "next": "C01_S11_R_D0045",
+              "effects": [
+                "C01_N02:PHASE_4:CHALLENGE"
+              ]
+            },
+            {
+              "label": "CONSULT — examine legal limits",
+              "next": "C01_S11_R_D0046",
+              "effects": [
+                "C01_N02:PHASE_4:CONSULT"
+              ]
+            },
+            {
+              "label": "EVIDENCE! Select a permitted record",
+              "next": "C01_S11_V11_EVIDENCE_MENU_C01_N02_4",
+              "effects": [],
+              "evidence_menu": [
+                "C01_E09",
+                "C01_E05"
+              ]
+            }
+          ],
+          "tag": "NEGOTIATION_PHASE:C01_N02:4"
+        },
+        {
+          "id": "C01_S11_V11_EVIDENCE_MENU_C01_N02_4",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Choose a specific authenticated, relevant record. Unavailable records cannot be presented.",
+          "tag": "PRESENTATION_SELECT:C01_N02:4",
+          "options": [
+            {
+              "label": "Present Redeployment Assessment (C01_E09)",
+              "evidence_id": "C01_E09",
+              "next": "C01_S11_R_X0023",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E09"
+              ]
+            },
+            {
+              "label": "Present New Position Description (C01_E05)",
+              "evidence_id": "C01_E05",
+              "next": "C01_S11_R_X0023",
+              "effects": [
+                "SELECT_EVIDENCE:C01_E05"
+              ]
+            },
+            {
+              "label": "Cancel; return to argument",
+              "next": "C01_S11_R_X0021",
+              "effects": []
+            }
+          ],
+          "candidate_status": "RECONSTRUCTED_V1_1_PROPOSAL"
+        },
+        {
+          "id": "C01_S11_R_D0044",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Was the advertised role examined as a possible alternative for Daniel?",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0021"
+        },
+        {
+          "id": "C01_S11_R_D0045",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "A rejection without recorded reasoning may need further explanation; it does not automatically make Daniel qualified.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0022"
+        },
+        {
+          "id": "C01_S11_R_D0046",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Ask which roles were considered, the criteria used, and the response to Daniel’s documented experience.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0021"
+        },
+        {
+          "id": "C01_S11_R_X0022",
+          "type": "join",
+          "tag": "NEGOTIATION_PHASE:C01_N02:4",
+          "next": "C01_S11_R_X0024"
+        },
+        {
+          "id": "C01_S11_R_X0023",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:4",
+          "tag": "PRESENTATION_PERMISSION:C01_N02:4",
+          "yes": "C01_S11_R_D0047",
+          "no": "C01_S11_R_D0048"
+        },
+        {
+          "id": "C01_S11_R_D0047",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The assessment establishes only the alternatives it actually considers and the reasons it records.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A06",
+          "effects": [
+            "EVIDENCE_PRESENTED:C01_N02:4"
+          ],
+          "next": "C01_S11_R_X0022"
+        },
+        {
+          "id": "C01_S11_R_D0048",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "That item does not establish the proposition or is not permitted here. Select another record or use a supported non-documentary challenge.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "effects": [
+            "MOMENTUM:-1"
+          ],
+          "next": "C01_S11_R_X0021"
+        },
+        {
+          "id": "C01_S11_R_X0024",
+          "type": "gate",
+          "test": "phase_evidence:C01_N02:4",
+          "tag": "EVIDENCE_GUARD:C01_N02:4",
+          "yes": "C01_S11_R_D0049",
+          "no": "C01_S11_R_D0051"
+        },
+        {
+          "id": "C01_S11_R_D0049",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The assessment establishes only the alternatives it actually considers and the reasons it records.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0050"
+        },
+        {
+          "id": "C01_S11_R_D0050",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We can request more explanation for omitted vacancies without guaranteeing a specific job.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0025"
+        },
+        {
+          "id": "C01_S11_R_D0051",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The record is incomplete. We ask Northbridge for a specific role-by-role explanation.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0052"
+        },
+        {
+          "id": "C01_S11_R_D0052",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "If the employer cannot supply one now, we record the outstanding issue.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0025"
+        },
+        {
+          "id": "C01_S11_R_X0025",
+          "type": "join",
+          "tag": "EVIDENCE_GUARD:C01_N02:4",
+          "next": "C01_S11_R_X0026"
+        },
+        {
+          "id": "C01_S11_R_X0026",
+          "type": "event",
+          "effect": "NEGOTIATION_PHASE_COMPLETE:C01_N02:4",
+          "next": "C01_S11_R_D0053"
+        },
+        {
+          "id": "C01_S11_R_D0053",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We have identified the reassignment dispute. Now we read the proposed terms word for word.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0054"
+        },
+        {
+          "id": "C01_S11_R_D0054",
+          "type": "line",
+          "speaker": "SUP_NORTHBRIDGE_REP",
+          "text": "Northbridge offers Daniel an interview for the advertised position, provided he signs a full and final waiver of claims arising from the restructuring.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_R_D0055"
+        },
+        {
+          "id": "C01_S11_R_D0055",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "An interview does not resolve a dismissal notice, and the waiver is broader than Daniel has authorised us to discuss.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_D0056"
+        },
+        {
+          "id": "C01_S11_R_D0056",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Then we need a narrower written offer. We will show Daniel every individual clause and verify what the union can accept for itself.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_INITIAL_OFFER_CHOICE"
+        },
+        {
+          "id": "C01_S11_V12_INITIAL_OFFER_CHOICE",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Northbridge wants a broad waiver in exchange for an interview. What should Vera do?",
+          "options": [
+            {
+              "label": "Reject the blanket waiver and request precise revised terms",
+              "next": "C01_S11_V12_REVISED_OPENING",
+              "effects": []
+            },
+            {
+              "label": "Accept the waiver for Daniel",
+              "next": "C01_S11_V12_REJECT_WAIVER",
+              "effects": []
+            },
+            {
+              "label": "Ask whether an interview alone settles the dismissal",
+              "next": "C01_S11_V12_INTERVIEW_EXPLANATION",
+              "effects": []
+            }
+          ],
+          "tag": "SETTLEMENT_OFFER_REVIEW:C01"
+        },
+        {
+          "id": "C01_S11_V12_REJECT_WAIVER",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Daniel has not instructed us to release all claims. An unbounded waiver cannot be accepted on his behalf.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_INITIAL_OFFER_CHOICE"
+        },
+        {
+          "id": "C01_S11_V12_INTERVIEW_EXPLANATION",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "No. An interview is a step in an assessment, not automatically a remedy for an existing dismissal notice. We need the written proposal.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_INITIAL_OFFER_CHOICE"
+        },
+        {
+          "id": "C01_S11_V12_REVISED_OPENING",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "Very well. Northbridge is prepared to put a narrower written package on the table, without an admission that its original decision was unlawful.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T01"
+        },
+        {
+          "id": "C01_S11_V12_T01",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Clause 1 — Northbridge withdraws its June 10 dismissal notice to Daniel in writing. His existing employment and contractual pay continue; the withdrawal is not conditional on accepting a different vacancy.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T02"
+        },
+        {
+          "id": "C01_S11_V12_T02",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "Clause 2 — Northbridge conducts and documents a new assessment of the currently identified vacancies and reasonable reassignment options, including the advertised role and its actual qualification requirements.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T03"
+        },
+        {
+          "id": "C01_S11_V12_T03",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Clause 3 — Daniel may submit a documented skills account, receive the vacancy descriptions used in that assessment, and comment on any factual errors before its conclusion.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T04"
+        },
+        {
+          "id": "C01_S11_V12_T04",
+          "type": "line",
+          "speaker": "JULIAN_VANE",
+          "text": "Clause 4 — Northbridge gives Daniel a written reasoned outcome: which roles were examined, any positions offered, and the reasons for finding a role suitable or unsuitable.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T05"
+        },
+        {
+          "id": "C01_S11_V12_T05",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "Clause 5 — If you propose a different position, I receive its duties, pay, location and conditions in writing. I decide separately whether to accept it; this agreement does not accept it for me.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_V12_T06"
+        },
+        {
+          "id": "C01_S11_V12_T06",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Clause 6 — For collective follow-up, Northbridge supplies UWF an appropriately minimised account of the review method and meets UWF to discuss the process after the reassessment, subject to lawful disclosure.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T07"
+        },
+        {
+          "id": "C01_S11_V12_T07",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Clause 7 — This package settles only the expressly identified dismissal-notice withdrawal and agreed review commitments. It contains no general release of unrelated claims or assertion that a disputed legal breach has been proven.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T08"
+        },
+        {
+          "id": "C01_S11_V12_T08",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Clause 8 — The record identifies which commitments belong to Daniel’s individual arrangement and which are agreed by UWF and Northbridge. Its legal classification depends on the actual parties, terms and written form.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_T09"
+        },
+        {
+          "id": "C01_S11_V12_T09",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Clause 9 — Each commitment is marked proposed until the correct employer, UWF and, where relevant, Daniel authority is verified. Implementation is checked independently afterward.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_SCOPE_CHECK"
+        },
+        {
+          "id": "C01_S11_V12_SCOPE_CHECK",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Which statement accurately describes this proposed package?",
+          "options": [
+            {
+              "label": "It separates withdrawal, individual reassignment decisions and collective process follow-up",
+              "next": "C01_S11_V12_SCOPE_ACCEPTED",
+              "effects": []
+            },
+            {
+              "label": "It guarantees Daniel the advertised job and settles all possible claims",
+              "next": "C01_S11_V12_SCOPE_CORRECTION",
+              "effects": []
+            },
+            {
+              "label": "Signing proves Northbridge previously breached the law",
+              "next": "C01_S11_V12_SCOPE_CORRECTION",
+              "effects": []
+            }
+          ],
+          "tag": "SETTLEMENT_SCOPE_REVIEW:C01"
+        },
+        {
+          "id": "C01_S11_V12_SCOPE_CORRECTION",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Read the clauses again. The offer does not guarantee a vacancy, waive unrelated rights or adjudicate alleged misconduct.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_V12_SCOPE_CHECK"
+        },
+        {
+          "id": "C01_S11_V12_SCOPE_ACCEPTED",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "I can consider that written package. But no one should mistake my willingness to consider it for my acceptance.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S11_V12_INSTRUCTIONS"
+        },
+        {
+          "id": "C01_S11_V12_INSTRUCTIONS",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "We will seek Daniel’s informed instructions on the individual arrangement. Separately, the appropriate UWF decision-maker and Northbridge’s authorised signatory must approve any collective commitments.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S11_R_X0027"
+        },
+        {
+          "id": "C01_S11_R_X0027",
+          "type": "event",
+          "effect": "TERMS_REVIEWED:C01_N02",
+          "next": "C01_S11_R_X0028",
+          "contract": "Fires only after C01_S11_V12_T01 through T09 and scope check successfully completed."
+        },
+        {
+          "id": "C01_S11_R_X0028",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "Record the legally supported result for the proposed written package.",
+          "options": [
+            {
+              "label": "AGREEMENT — only with matching authority for the exact package",
+              "next": "C01_S11_R_X0030",
+              "effects": []
+            },
+            {
+              "label": "CONTINUING — seek instructions or further documents",
+              "next": "C01_S11_R_D0059",
+              "effects": []
+            },
+            {
+              "label": "DISAGREEMENT — record both parties’ stated positions",
+              "next": "C01_S11_R_D0060",
+              "effects": []
+            }
+          ],
+          "tag": "FINAL_OUTCOME:C01"
+        },
+        {
+          "id": "C01_S11_R_X0029",
+          "type": "join",
+          "tag": "OUTCOME_COMMITTED:C01",
+          "next": "C01_S11_R_X0031"
+        },
+        {
+          "id": "C01_S11_R_X0030",
+          "type": "gate",
+          "test": "agreement_authorised:C01",
+          "tag": "AGREEMENT_AUTHORITY:C01",
+          "yes": "C01_S11_R_D0057",
+          "no": "C01_S11_R_D0058",
+          "authority_contract": {
+            "offer_id": "C01_OFFER_REVISED",
+            "requires": [
+              "employer_acceptance_of_exact_terms",
+              "UWF_acceptance_of_exact_collective_terms",
+              "Daniel_informed_individual_instructions",
+              "no_unapproved_claim_release",
+              "reviewed_all_nine_clauses"
+            ],
+            "on_fail": "C01_S11_R_D0058"
+          }
+        },
+        {
+          "id": "C01_S11_R_D0057",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The signatories and Daniel have authorised this precisely scoped package. The written agreement is recorded; the withdrawal and review commitments still require independent implementation verification.",
+          "animation": "A02",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "next": "C01_S11_R_X0029",
+          "effects": [
+            "C01:AGREEMENT"
+          ]
+        },
+        {
+          "id": "C01_S11_R_D0058",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "We cannot accept these terms without the authorised employer and UWF approvals and Daniel’s informed instructions. Return to the outcome choice or seek the actual decisions.",
+          "animation": "A02",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "next": "C01_S11_R_X0028"
+        },
+        {
+          "id": "C01_S11_R_D0059",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "No agreement today. Northbridge will answer the identified information requests and the union will consult Daniel before any new individual proposal.",
+          "animation": "A02",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "next": "C01_S11_R_X0029",
+          "effects": [
+            "C01:CONTINUING"
+          ]
+        },
+        {
+          "id": "C01_S11_R_D0060",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The protocol will record Northbridge’s stated work-shortage position and UWF’s objections and unresolved evidence requests. No settlement is signed.",
+          "animation": "A02",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "next": "C01_S11_R_X0029",
+          "effects": [
+            "C01:DISAGREEMENT"
+          ]
+        },
+        {
+          "id": "C01_S11_R_X0031",
+          "type": "event",
+          "effect": "FINAL_OUTCOME_RECORDED:C01",
+          "next": "C01_S11_R_X0032"
+        },
+        {
+          "id": "C01_S11_R_X0032",
+          "type": "event",
+          "effect": "NEGOTIATION_COMPLETE:C01_N02",
+          "next": "C01_S11_R_D0061"
+        },
+        {
+          "id": "C01_S11_R_D0061",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S11_R_X0033"
+        },
+        {
+          "id": "C01_S11_R_X0033",
+          "type": "scene_exit",
+          "scene_complete": "C01_S11_COMPLETE",
+          "next_scene": "C01_S12"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S11_I01",
+        "C01_S11_I02",
+        "C01_S11_I03"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    },
+    "C01_S12": {
+      "id": "C01_S12",
+      "background": "BG01",
+      "summary": "Daniel’s actual outcome; optional consultancy source; Bellwether transition.",
+      "entry": "C01_S12_R_D0001",
+      "nodes": [
+        {
+          "id": "C01_S12_R_D0001",
+          "type": "line",
+          "speaker": "SUP_DANIEL",
+          "text": "I thought this case would turn on one perfect document. It turned on asking which document answered which question.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "SUP_SPEAKING",
+          "next": "C01_S12_R_D0002"
+        },
+        {
+          "id": "C01_S12_R_D0002",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "That is how you build an argument people can check, rather than a speech they are supposed to applaud.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_D0003"
+        },
+        {
+          "id": "C01_S12_R_D0003",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Our case report will state what was agreed, what remains in dispute, and what still has to be verified after this meeting.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_D0004"
+        },
+        {
+          "id": "C01_S12_R_D0004",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "A Bellwether worker has asked whether her schedule changed because she attended a union meeting.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_D0005"
+        },
+        {
+          "id": "C01_S12_R_D0005",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Then we start the next case where this one started: with her account, and with permission to examine it.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0001"
+        },
+        {
+          "id": "C01_S12_R_X0001",
+          "type": "choice",
+          "speaker": "VERA_JUSTICE",
+          "prompt": "What belongs in the chapter outcome report?",
+          "options": [
+            {
+              "label": "The actual recorded outcome and outstanding follow-up",
+              "next": "C01_S12_R_D0006",
+              "effects": [
+                "REASONING:SUPPORTED"
+              ]
+            },
+            {
+              "label": "A victory headline regardless of outcome",
+              "next": "C01_S12_R_D0007",
+              "effects": [
+                "REASONING:OVERSTATEMENT_CORRECTED"
+              ]
+            },
+            {
+              "label": "A claim that everyone approved the settlement",
+              "next": "C01_S12_R_D0008",
+              "effects": [
+                "REASONING:CONSENT_GUARD"
+              ]
+            }
+          ],
+          "tag": "CASE_REASONING"
+        },
+        {
+          "id": "C01_S12_R_D0006",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Report agreement, continuing negotiations or disagreement as actually recorded, with implementation separately verified.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0002"
+        },
+        {
+          "id": "C01_S12_R_D0007",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "A good case report survives a disappointing outcome.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0002"
+        },
+        {
+          "id": "C01_S12_R_D0008",
+          "type": "line",
+          "speaker": "SALLY_DARITY",
+          "text": "Do not attribute agreement to Daniel, Nina or other workers without their own recorded decisions.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0002"
+        },
+        {
+          "id": "C01_S12_R_X0002",
+          "type": "join",
+          "tag": "CASE_REASONING",
+          "next": "C01_S12_R_D0009"
+        },
+        {
+          "id": "C01_S12_R_D0009",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "The consultancy proposal is background context if it can be authenticated and lawfully used.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0003"
+        },
+        {
+          "id": "C01_S12_R_X0003",
+          "type": "gate",
+          "test": "evidence_auth:C01_E10",
+          "tag": "EVIDENCE:C01_E10",
+          "yes": "C01_S12_R_D0010",
+          "no": "C01_S12_R_D0012"
+        },
+        {
+          "id": "C01_S12_R_D0010",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "A verified proposal proves particular advice was proposed—not that Northbridge implemented it.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_D0011"
+        },
+        {
+          "id": "C01_S12_R_D0011",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "Record the source, purpose and authorised recipients. Nothing further is implied.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0004"
+        },
+        {
+          "id": "C01_S12_R_D0012",
+          "type": "line",
+          "speaker": "LAURENCE_ABBOTT",
+          "text": "Do not build a theory of coordinated conduct from an unavailable consultancy document.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_D0013"
+        },
+        {
+          "id": "C01_S12_R_D0013",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "Record the missing source as a gap and use an independent route if available.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0004"
+        },
+        {
+          "id": "C01_S12_R_X0004",
+          "type": "join",
+          "tag": "EVIDENCE:C01_E10",
+          "next": "C01_S12_R_X0005"
+        },
+        {
+          "id": "C01_S12_R_X0005",
+          "type": "event",
+          "effect": "EVIDENCE_STATUS_RESOLVED:C01_E10",
+          "next": "C01_S12_R_X0006"
+        },
+        {
+          "id": "C01_S12_R_X0006",
+          "type": "gate",
+          "test": "outcome_is_agreement:C01",
+          "tag": "EPILOGUE_OUTCOME",
+          "yes": "C01_S12_R_D0014",
+          "no": "C01_S12_R_D0015"
+        },
+        {
+          "id": "C01_S12_R_D0014",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "The written commitments are agreed, but Northbridge’s future review and any employment measures still require their own verification.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0007"
+        },
+        {
+          "id": "C01_S12_R_D0015",
+          "type": "line",
+          "speaker": "AUDREY_ORDER",
+          "text": "There is no signed settlement. The file records whether discussions continue or the parties have documented disagreement.",
+          "source": "RECONSTRUCTED_V1_2_EDITORIAL",
+          "animation": "A02",
+          "next": "C01_S12_R_X0007"
+        },
+        {
+          "id": "C01_S12_R_X0007",
+          "type": "join",
+          "tag": "EPILOGUE_OUTCOME",
+          "next": "C01_S12_R_D0016"
+        },
+        {
+          "id": "C01_S12_R_D0016",
+          "type": "line",
+          "speaker": "VERA_JUSTICE",
+          "text": "We move forward with the facts, permissions and decisions as actually recorded.",
+          "source": "RECONSTRUCTED_V1",
+          "animation": "A02",
+          "next": "C01_S12_R_X0008"
+        },
+        {
+          "id": "C01_S12_R_X0008",
+          "type": "scene_exit",
+          "scene_complete": "C01_S12_COMPLETE",
+          "next_scene": "C02_S01"
+        }
+      ],
+      "original_interaction_block_refs": [
+        "C01_S12_I01",
+        "C01_S12_I02"
+      ],
+      "source_status": "RECONSTRUCTED_SCENE_WITH_PRESERVED_PATCH_WHERE_AVAILABLE"
+    }
+  },
+  "offer": {
+    "C01_OFFER_INITIAL": {
+      "status": "REJECTABLE_OPENING_OFFER",
+      "party": "Northbridge",
+      "promises": [
+        "Daniel interview for posted position"
+      ],
+      "requested_release": "Broad release of restructuring-related claims",
+      "accepted_by_script": false,
+      "legal_note": "Daniel has not instructed broad waiver; no automatic acceptance."
+    },
+    "C01_OFFER_REVISED": {
+      "status": "PROPOSED_NOT_BINDING",
+      "parties": [
+        "Northbridge",
+        "UWF",
+        "Daniel for individual terms"
+      ],
+      "clauses": [
+        {
+          "id": "NB-O1",
+          "type": "INDIVIDUAL",
+          "obligation": "Withdraw the June 10 dismissal notice in writing; existing employment and contractual pay continue, not conditional on taking a vacancy",
+          "verifier": "Withdrawal document and employment/payroll status"
+        },
+        {
+          "id": "NB-O2",
+          "type": "INDIVIDUAL",
+          "obligation": "Document vacancy/reassignment assessment including advertised role and requirements",
+          "verifier": "Written role-by-role assessment"
+        },
+        {
+          "id": "NB-O3",
+          "type": "INDIVIDUAL",
+          "obligation": "Give Daniel chance to supply skill evidence and correct factual errors",
+          "verifier": "Recorded invitation and response"
+        },
+        {
+          "id": "NB-O4",
+          "type": "INDIVIDUAL",
+          "obligation": "Provide Daniel written reasons and any documented alternative offer",
+          "verifier": "Written determination and any offer"
+        },
+        {
+          "id": "NB-O5",
+          "type": "INDIVIDUAL",
+          "obligation": "Any new job requires Daniel’s separate informed acceptance, with terms provided in writing",
+          "verifier": "Separate instruction and accepted offer if any"
+        },
+        {
+          "id": "NB-O6",
+          "type": "COLLECTIVE",
+          "obligation": "Give UWF a lawfully minimised account of review method and meet for process follow-up",
+          "verifier": "Summary and union-meeting record"
+        },
+        {
+          "id": "NB-O7",
+          "type": "SCOPE_LIMIT",
+          "obligation": "No blanket waiver or admission of unlawfulness; rights outside explicit settlement scope not released",
+          "verifier": "Exact signed terms"
+        },
+        {
+          "id": "NB-O8",
+          "type": "PARTY_CLASSIFICATION",
+          "obligation": "Distinguish Daniel individual arrangements and any UWF/employer collective agreement; legal type determined by form/parties/terms",
+          "verifier": "Separate instruments or marked sections"
+        },
+        {
+          "id": "NB-O9",
+          "type": "VERIFICATION",
+          "obligation": "Agreement not committed until actual authority verified; later obligations are tracked separately",
+          "verifier": "Mandate records, signatures and post-action evidence"
+        }
+      ],
+      "preconditions": {
+        "dialogue": "C01_S11_V12_SCOPE_ACCEPTED",
+        "terms_review_event": "TERMS_REVIEWED:C01_N02",
+        "union": "AUTH_ACCEPT_COLLECTIVE_TERMS appropriate to terms",
+        "employer": "AUTH_ACCEPT for exact offer",
+        "individual": "Daniel informed instructions for individual terms",
+        "other": "No unauthorised release or disclosure"
+      },
+      "agreement_gate": "agreement_authorised:C01",
+      "predicate_contract": "True only if all terms in the actual offer and all signatory scopes matched; no mere dialogue button suffices.",
+      "alternative_outcomes": [
+        "CONTINUING",
+        "DISAGREEMENT"
+      ],
+      "implemented_on_acceptance": false
+    }
+  },
+  "source_version": "1.2",
+  "v2_corrections": []
+}
