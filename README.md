@@ -19,8 +19,17 @@ Keyboard and mouse both work for every choice.
 - All **3 endings** (Agreement / Continuing / Disagreement) and a Case 1 report screen.
 - Autosave (scene start + negotiation checkpoints), Continue, settings (text speed, size, reduced motion).
 
+## Art
+- **Pixel art**, made in Godot by `tools/art_builder.gd` (no external art tools).
+- 6 main characters × the 12 GDD states (A01 Neutral … A12 Signature), plus Daniel, Nina and the Northbridge rep.
+- Signature moves follow the GDD: Vera points, Audrey closes her notebook, Sally opens her notes,
+  Laurence adjusts his glasses, Julian straightens his jacket, Mona closes her folder.
+- Plays at 22 FPS; each character has a sprite sheet + `animation.json` in `art/characters/...`.
+- 5 backgrounds used in Case 1 (BG01, BG02, BG03, BG05, BG12) + title, at 320×180, shown 2× size.
+- To change the art: edit `tools/art_builder.gd`, then run
+  `godot --headless --path . --script res://tools/art_builder.gd`
+
 ## Placeholders
-- Characters and backgrounds are simple shapes drawn in code — no art files yet.
 - No sound or music.
 - Intro text is written from the GDD; it is not script dialogue.
 

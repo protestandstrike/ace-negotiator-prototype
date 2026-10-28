@@ -50,22 +50,24 @@ func _ready() -> void:
 	(b_cont if not b_cont.disabled else b_new).call_deferred("grab_focus")
 
 	var foot := UI.label("An educational work of fiction. Not legal advice. All organisations and people are fictional.", 9, UI.C_MUTED, false)
-	foot.position = Vector2(44, 338)
+	foot.position = Vector2(8, 342)
+	foot.z_index = 3
+	foot.add_theme_color_override("font_outline_color", Color("#0b1022"))
+	foot.add_theme_constant_override("outline_size", 4)
 	add_child(foot)
 
 	# Character line-up on the right
-	var Portrait := preload("res://scripts/portrait.gd")
-	var ids := ["LAURENCE_ABBOTT", "AUDREY_ORDER", "VERA_JUSTICE", "SALLY_DARITY"]
+	var SpriteActor := preload("res://scripts/sprite_actor.gd")
+	var ids := ["LAURENCE_ABBOTT", "AUDREY_ORDER", "SALLY_DARITY", "VERA_JUSTICE"]
+	var xs := [300, 370, 440, 510]
 	for i in ids.size():
-		var p := Portrait.new()
-		p.setup(ids[i])
-		var big: bool = ids[i] == "VERA_JUSTICE"
-		p.size = Vector2(130, 190) if big else Vector2(100, 146)
-		p.position = Vector2(300 + i * 80 - (15 if big else 0), 340 - p.size.y)
-		p.z_index = 2 if big else 0
-		if not big:
-			p.modulate = Color(0.75, 0.78, 0.85)
+		var p := SpriteActor.new()
+		p.setup(ids[i], 2)
+		p.position = Vector2(xs[i] - p.size.x * 0.5 + 40, 360 - p.size.y)
+		if ids[i] != "VERA_JUSTICE":
+			p.modulate = Color(0.72, 0.75, 0.85)
 		add_child(p)
+		p.play("A12" if ids[i] == "VERA_JUSTICE" else "A01")
 
 
 func _open_settings() -> void:

@@ -1,0 +1,77 @@
+{
+  "actor": "SUP_DANIEL",
+  "columns": 8,
+  "duration_unit": "frames_at_fps",
+  "fallback": "SUP_NEUTRAL",
+  "fps": 22,
+  "frame_size": [
+    64,
+    72
+  ],
+  "kind": "supporting",
+  "pivot": [
+    32,
+    72
+  ],
+  "sheet": "sheet.png",
+  "states": {
+    "SUP_CONCERNED": {
+      "durations": [
+        60,
+        2
+      ],
+      "frames": [
+        5,
+        6
+      ],
+      "loop": true,
+      "name": "Concerned",
+      "reduced_motion_frame": 5
+    },
+    "SUP_NEUTRAL": {
+      "durations": [
+        66,
+        1,
+        2,
+        1
+      ],
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "loop": true,
+      "name": "Neutral",
+      "reduced_motion_frame": 0
+    },
+    "SUP_RELIEVED": {
+      "durations": [
+        40
+      ],
+      "frames": [
+        7
+      ],
+      "loop": true,
+      "name": "Relieved",
+      "reduced_motion_frame": 7
+    },
+    "SUP_SPEAKING": {
+      "durations": [
+        2,
+        2,
+        3,
+        2
+      ],
+      "frames": [
+        0,
+        3,
+        4,
+        3
+      ],
+      "loop": true,
+      "name": "Speaking",
+      "reduced_motion_frame": 0
+    }
+  }
+}

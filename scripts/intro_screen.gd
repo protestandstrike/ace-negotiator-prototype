@@ -6,7 +6,7 @@ signal finished
 
 const UI := preload("res://scripts/ui_kit.gd")
 const Background := preload("res://scripts/background.gd")
-const Portrait := preload("res://scripts/portrait.gd")
+const SpriteActor := preload("res://scripts/sprite_actor.gd")
 
 const PAGES := [
 	{"bg": "TITLE", "cast": [], "title": "Sweden · June 2026",
@@ -108,14 +108,14 @@ func _next() -> void:
 		c.queue_free()
 	var cast: Array = pg["cast"]
 	for i in cast.size():
-		var por := Portrait.new()
-		por.setup(cast[i])
-		por.size = Vector2(110, 160)
-		por.position = Vector2(320 - cast.size() * 60 + i * 120 + 5, 200 - 160 + 4)
+		var por := SpriteActor.new()
+		por.setup(cast[i], 2)
+		por.position = Vector2(320 - cast.size() * 60 + i * 120 + 60 - por.size.x * 0.5, 200 - por.size.y)
 		_cast_holder.add_child(por)
+		por.play("A12", "A01")
 		var nm := UI.label(GS.speaker_name(cast[i]), 10, Color(GS.SPEAKERS[cast[i]]["color"]), false)
 		nm.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		nm.position = por.position + Vector2(0, -14)
+		nm.position = por.position + Vector2(9, -12)
 		nm.custom_minimum_size = Vector2(110, 0)
 		_cast_holder.add_child(nm)
 	for c in _extra.get_children():

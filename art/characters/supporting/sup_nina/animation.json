@@ -1,0 +1,66 @@
+{
+  "actor": "SUP_NINA",
+  "columns": 8,
+  "duration_unit": "frames_at_fps",
+  "fallback": "SUP_NEUTRAL",
+  "fps": 22,
+  "frame_size": [
+    64,
+    72
+  ],
+  "kind": "supporting",
+  "pivot": [
+    32,
+    72
+  ],
+  "sheet": "sheet.png",
+  "states": {
+    "SUP_HESITANT": {
+      "durations": [
+        50,
+        2
+      ],
+      "frames": [
+        5,
+        6
+      ],
+      "loop": true,
+      "name": "Hesitant",
+      "reduced_motion_frame": 5
+    },
+    "SUP_NEUTRAL": {
+      "durations": [
+        66,
+        1,
+        2,
+        1
+      ],
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "loop": true,
+      "name": "Neutral",
+      "reduced_motion_frame": 0
+    },
+    "SUP_SPEAKING": {
+      "durations": [
+        2,
+        2,
+        3,
+        2
+      ],
+      "frames": [
+        0,
+        3,
+        4,
+        3
+      ],
+      "loop": true,
+      "name": "Speaking",
+      "reduced_motion_frame": 0
+    }
+  }
+}

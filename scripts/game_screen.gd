@@ -7,11 +7,10 @@ signal quit_to_title
 signal _modal_choice(idx: int)
 
 const UI := preload("res://scripts/ui_kit.gd")
-const Portrait := preload("res://scripts/portrait.gd")
+const SpriteActor := preload("res://scripts/sprite_actor.gd")
 const Background := preload("res://scripts/background.gd")
 const SettingsPanel := preload("res://scripts/settings_panel.gd")
 
-const PORTRAIT_SIZE := Vector2(92, 132)
 const STAGE_BOTTOM := 266.0
 
 var bg: Control
@@ -31,6 +30,7 @@ var modal_layer: Control
 var fade: ColorRect
 
 var portraits: Dictionary = {}
+var _react_next := ""   # reaction state for the next speaker (e.g. A12 after a correction)
 var current: Dictionary = {}
 var mode := ""            # "line" | "choice" | "busy"
 var typing := false
@@ -256,30 +256,57 @@ func _build_roster(sc: Dictionary) -> void:
 		for i in right.size():
 			positions[right[i]] = 586.0 - i * step
 	for sp in positions:
-		var p := Portrait.new()
-		p.setup(sp)
-		p.size = PORTRAIT_SIZE
-		p.position = Vector2(positions[sp] - PORTRAIT_SIZE.x * 0.5, STAGE_BOTTOM - PORTRAIT_SIZE.y)
-		p.pivot_offset = Vector2(PORTRAIT_SIZE.x * 0.5, PORTRAIT_SIZE.y)
-		p.modulate = Color(0.6, 0.62, 0.7)
+		var p := SpriteActor.new()
+		p.setup(sp, 2)
+		p.position = Vector2(roundf(positions[sp] - p.size.x * 0.5), STAGE_BOTTOM - p.size.y)
+		p.modulate = Color(0.68, 0.7, 0.78)
 		stage.add_child(p)
 		portraits[sp] = p
+		p.play(_idle_state(sp))
+	if portraits.has("JULIAN_VANE"):
+		portraits["JULIAN_VANE"].play("A12", "A01", 1.5)   # straightens jacket on entry
 
 
 func _side_rank(sp: String) -> int:
 	return ["VERA_JUSTICE", "AUDREY_ORDER", "LAURENCE_ABBOTT", "SALLY_DARITY", "SUP_DANIEL", "SUP_NINA"].find(sp)
 
 
-func _focus_speaker(sp: String, talking: bool) -> void:
+## Resting animation for a character who is on stage but not speaking.
+func _idle_state(sp: String) -> String:
+	var scene_n := GS.scene_number(GS.state["scene_id"])
+	match sp:
+		"SUP_DANIEL":
+			if scene_n == 12:
+				return "SUP_RELIEVED" if GS.state["outcome"] == "AGREEMENT" else "SUP_CONCERNED"
+			return "SUP_NEUTRAL" if scene_n == 11 else "SUP_CONCERNED"
+		"SUP_NINA":
+			return "SUP_NEUTRAL" if GS.state["witness"].has("NINA") else "SUP_HESITANT"
+		"SUP_NORTHBRIDGE_REP":
+			return "SUP_FORMAL"
+		"JULIAN_VANE", "MONA_POLLY":
+			return "A01"
+	return "A11"
+
+
+func _focus_speaker(sp: String, anim: String) -> void:
 	for id in portraits:
 		var p = portraits[id]
 		var on: bool = id == sp
-		p.speaking = on and talking
-		p.active = on
-		p.modulate = Color.WHITE if on else Color(0.55, 0.57, 0.65)
-		p.scale = Vector2(1.07, 1.07) if on else Vector2.ONE
+		p.modulate = Color.WHITE if on else Color(0.68, 0.7, 0.78)
 		if on:
 			p.move_to_front()
+			if _react_next != "" and p.has_state(_react_next):
+				p.play(_react_next, anim, 0.8)
+			else:
+				p.play(anim)
+		else:
+			p.idle(_idle_state(id))
+	_react_next = ""
+
+
+func _react(sp: String, state: String, then: String = "", lock: float = 1.6) -> void:
+	if portraits.has(sp):
+		portraits[sp].play(state, then if then != "" else _idle_state(sp), lock)
 
 
 # ================================================================ graph interpreter
@@ -332,7 +359,18 @@ func _show_line(n: Dictionary) -> void:
 	mode = "line"
 	var sp: String = n["speaker"]
 	_set_text(GS.speaker_name(sp), n["text"], GS.SPEAKERS.get(sp, {}).get("color", "#4fc3c9"))
-	_focus_speaker(sp, true)
+	var anim: String = n.get("animation", "A02")
+	_focus_speaker(sp, anim)
+	for e in n.get("effects", []):
+		if e.begins_with("MOMENTUM:-"):
+			_react("VERA_JUSTICE", "A09")
+			_react("JULIAN_VANE", "A04", "A01")
+		elif e == "C01:AGREEMENT":
+			for id in ["AUDREY_ORDER", "LAURENCE_ABBOTT", "SALLY_DARITY"]:
+				_react(id, "A10", "A11", 2.5)
+			_react("SUP_DANIEL", "SUP_RELIEVED", "SUP_RELIEVED", 3.0)
+		elif e == "C01:DISAGREEMENT":
+			_react("VERA_JUSTICE", "A08", "A08", 2.5)
 	GS.add_log(GS.speaker_name(sp), n["text"])
 	_last_text = n["text"]
 
@@ -367,8 +405,9 @@ func _process(delta: float) -> void:
 func _finish_typing() -> void:
 	typing = false
 	text_label.visible_characters = -1
-	for p in portraits.values():
-		p.speaking = false
+	var sp: String = current.get("speaker", "")
+	if portraits.has(sp) and portraits[sp].state in ["A02", "SUP_SPEAKING"]:
+		portraits[sp].play("A01" if sp in GS.SPEAKERS and not sp.begins_with("SUP_") else _idle_state(sp))
 
 
 func _advance() -> void:
@@ -447,11 +486,13 @@ func _show_choice(n: Dictionary) -> void:
 			var m := re.search(e)
 			if m:
 				_enter_phase(m.get_string(1), int(m.get_string(2)), n["id"])
+				_react("VERA_JUSTICE", "A03", "A03", 0.0)
 				_phase_view(n)
 				return
 
 	for o in opts:
 		if String(o["label"]).begins_with("HINT"):
+			_react("VERA_JUSTICE", "A03", "A03", 0.0)
 			_puzzle_view(n)
 			return
 	_plain_view(n)
@@ -562,6 +603,13 @@ func _choose(n: Dictionary, o: Dictionary) -> void:
 	GS.add_log("▶ Choice", o["label"])
 	for e in o.get("effects", []):
 		GS.apply_effect(e)
+		if e in ["REASONING:OVERSTATEMENT_CORRECTED", "REASONING:CONSENT_GUARD"]:
+			_react("VERA_JUSTICE", "A07", "", 1.4)
+			_react_next = "A12"   # the adviser who corrects Vera plays their signature move
+		elif e == "REASONING:SUPPORTED":
+			_react("VERA_JUSTICE", "A04", "", 1.4)
+		elif e.ends_with(":CHALLENGE"):
+			_react("VERA_JUSTICE", "A05", "", 1.8)
 	# Scene 6 recovery: re-checking the existing appointment record verifies it.
 	if n["id"] == "C01_S06_V11_AUTH_RECOVERY_CHOICE" and o["next"] == "C01_S06_V11_AUTH_GATE":
 		await _authority_record("The existing appointment record was located and checked.")

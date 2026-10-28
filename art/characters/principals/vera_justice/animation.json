@@ -1,0 +1,193 @@
+{
+  "actor": "VERA_JUSTICE",
+  "columns": 8,
+  "duration_unit": "frames_at_fps",
+  "fallback": "A01",
+  "fps": 22,
+  "frame_size": [
+    64,
+    72
+  ],
+  "kind": "principal",
+  "pivot": [
+    32,
+    72
+  ],
+  "sheet": "sheet.png",
+  "states": {
+    "A01": {
+      "durations": [
+        66,
+        1,
+        2,
+        1
+      ],
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "loop": true,
+      "name": "Neutral",
+      "reduced_motion_frame": 0
+    },
+    "A02": {
+      "durations": [
+        2,
+        2,
+        3,
+        2
+      ],
+      "frames": [
+        0,
+        3,
+        4,
+        3
+      ],
+      "loop": true,
+      "name": "Speaking",
+      "reduced_motion_frame": 0
+    },
+    "A03": {
+      "durations": [
+        44,
+        3
+      ],
+      "frames": [
+        5,
+        6
+      ],
+      "loop": true,
+      "name": "Thinking",
+      "reduced_motion_frame": 5
+    },
+    "A04": {
+      "durations": [
+        3,
+        40
+      ],
+      "frames": [
+        7,
+        8
+      ],
+      "loop": false,
+      "name": "Confident",
+      "reduced_motion_frame": 8
+    },
+    "A05": {
+      "durations": [
+        3,
+        2,
+        40
+      ],
+      "frames": [
+        9,
+        10,
+        11
+      ],
+      "loop": false,
+      "name": "Objection",
+      "reduced_motion_frame": 11
+    },
+    "A06": {
+      "durations": [
+        3,
+        3,
+        40
+      ],
+      "frames": [
+        12,
+        13,
+        14
+      ],
+      "loop": false,
+      "name": "Evidence Presentation",
+      "reduced_motion_frame": 14
+    },
+    "A07": {
+      "durations": [
+        2,
+        40
+      ],
+      "frames": [
+        15,
+        16
+      ],
+      "loop": false,
+      "name": "Surprised",
+      "reduced_motion_frame": 16
+    },
+    "A08": {
+      "durations": [
+        60,
+        2
+      ],
+      "frames": [
+        17,
+        18
+      ],
+      "loop": true,
+      "name": "Concerned",
+      "reduced_motion_frame": 17
+    },
+    "A09": {
+      "durations": [
+        20,
+        20
+      ],
+      "frames": [
+        19,
+        20
+      ],
+      "loop": true,
+      "name": "Frustrated",
+      "reduced_motion_frame": 19
+    },
+    "A10": {
+      "durations": [
+        3,
+        40
+      ],
+      "frames": [
+        21,
+        22
+      ],
+      "loop": false,
+      "name": "Positive",
+      "reduced_motion_frame": 22
+    },
+    "A11": {
+      "durations": [
+        30,
+        4,
+        30,
+        2
+      ],
+      "frames": [
+        0,
+        23,
+        0,
+        2
+      ],
+      "loop": true,
+      "name": "Listening",
+      "reduced_motion_frame": 0
+    },
+    "A12": {
+      "durations": [
+        3,
+        2,
+        40
+      ],
+      "frames": [
+        24,
+        25,
+        26
+      ],
+      "loop": false,
+      "name": "Character Signature",
+      "reduced_motion_frame": 26
+    }
+  }
+}
